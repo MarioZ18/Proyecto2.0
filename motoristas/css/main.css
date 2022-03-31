@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum&family=Sanchez&display=swap');
+
+body{
+    background-image: url(../img/fondo1.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh ;
+    background-position: center center ;
+    background-attachment: fixed;
+    margin: 0;
+    
+}
+
+#iniciarS{
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+   height: auto; /* viewport high alto de a vista*/
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center ;
+   background-attachment: fixed;
+   margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#logoM{
+    padding:10px 20px;
+    width: 100px;
+    size: 1px 1px;
+}
+
+.fuenteCu{
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+}
+
+.fuenteSa{
+    font-family: 'Sanchez', serif;
+}
+
+.fuenteBe{
+    font-family: 'Bebas Neue', cursive;
+     
+}
+
+
+#Formulario{
+    background-color: rgba(151, 151, 151, 0.541);
+    color: #000000;
+    width: 314px;
+    height: 560px;
+    border-radius: 5px;
+    padding: 30px 38px 30px 38px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color .3s ease-in-out;
+}
+
+
+
+#Formulario h1{
+    margin: 0;
+    font-size: 40px;
+    font-weight: 70px;
+    font-family: 'Melvetica Neue', Melvetica,Arial,sans-serif;
+    margin-bottom: 28px;
+}
+
+
+
+.control{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size:  20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.caja-texto{
+
+    background-color: #ffffff;
+}
+
+
+
+.boton{
+    background-color:#015989;
+    color: aliceblue;
+    margin-top: 30px;
+    cursor:pointer;
+    width: auto;
+    border-radius:40px;
+    padding: 10px 25px;
+    font-size: 23px !important;
+}
+
+
+.boton:hover{
+    background-color: black;
+    text-decoration: underline;
+}
+
+#olvidoC{
+    float: right;
+    color:#015989;
+    text-decoration: none;
+    font-size: 1rem ;
+}
+
+#olvidoC:hover{
+    text-decoration: underline;
+}
+
+/*/ Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575.98px) {
+
+    #logo{
+        width: 80px;
+    }
+    #Formulario{
+        background-color: transparent;
+        width: 80%;
+        height: auto;
+        border-radius: 0;
+        padding:5px 18px;
+        margin-top: 5px;
+        
+    } 
+    
+
+    #contenido{
+        height: auto;
+        background-color: black;
+        
+    }
+    #tp{
+        display: none;
+    }
+
+ }
+
+/*/ Medium devices (tablets, 768px and up)*/
+@media (min-width: 576px ) and (max-width:767.98px) {  }
+
+/*/ Large devices (desktops, 992px and up)*/
+@media (min-width: 768px ) and (max-width:991.98px) {  }
+
+/*/ X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 992px ) and (max-width:1199.98px) {  }
+
+/*/ XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1200px )  {  }
