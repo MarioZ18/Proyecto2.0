@@ -11,7 +11,7 @@
 
 
 </head>
-<body>
+<body id="fondo" class="fondoGen">
     <div>
        Motoristas
     </div>
@@ -28,14 +28,123 @@
 
             <br>
             <br>
-            <input class="control caja-texto fuenteSa" type="text" placeholder="Dirección de Correo">
-            <input class="control caja-texto fuenteSa" type="password" placeholder="Contraseña">
-            <div class="center fuenteBe"><input class="control boton"type="button" value="Iniciar Sesión"></div>
-            
+            <input class="control caja-texto fuenteSa" id="correoMotor" type="text" placeholder="Dirección de Correo">
+            <input class="control caja-texto fuenteSa" id="contraMotor" type="password" placeholder="Contraseña">
+            <div id="verif" class="fuente1"></div>
+            <div class="center fuenteBe"><input class="control boton"type="button" value="Iniciar Sesión" onclick="validarMoto();"></div>
             <br>
             <div class="center fuenteSa"><a href="#" id="olvidoC">¿Olvidó su contraseña?</a></div>
         </section>
     </div>
+
+    <div id="inicioMoto" class="top">
+
+
+        <div class="center">
+            <img id="logoM2" src="img/StorekMotor1.0.png" >
+        </div>
+
+        <div class="center fuenteCu titulo ">
+            <div class="card cardEstilos">Motoristas</div>
+            
+        </div>
+
+        <br>
+
+    
+
+       <div class="container-fluid">
+            <div class=" row center">
+                <div class="col-10 col-sm-6 col-md-3 "  >
+                    <div class="card  mb-4 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div id="iOrdDisp" class=" card col-4 py-2 etiquetas center ">
+                                <i class="fa-solid fa-magnifying-glass fa-5x"></i>
+                            </div>
+                            <div class="col-8 centery" >
+                                Ordenes Disponibles
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                    <br>
+                <div class="col-10 col-sm-6 col-md-3 "  >
+                    <div class="card  mt-1 mb-4 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div id="iOrdDisp" class=" card col-4 py-2 etiquetas center">
+                                <i class="fa-solid fa-magnifying-glass fa-5x"></i>
+                            </div>
+                            <div class="col-8 centery" >
+                                Ordenes Disponibles
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <br>
+                <div class="col-10 col-sm-6 col-md-3 "  >
+                    <div class="card  mt-1 mb-4 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div id="iOrdDisp" class=" card col-4 py-2 etiquetas center">
+                                <i class="fa-solid fa-magnifying-glass fa-5x"></i>
+                            </div>
+                            <div class="col-8 centery" >
+                                Ordenes Disponibles
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+       </div>
+
+
+
+    </div>
+
+    
+    <!--<div id="opcionesLateral">hola</div>
+
+
+    <div id="ajustes">hola</div>
+
+
+    <div id="soporte">hola</div>
+
+
+    <div id="preguntas">hola</div>
+
+
+    <div id="ordDispon">
+        <div id="ordDisponAct">
+        
+
+        </div>
+
+    </div>
+
+
+    <div id="ordProgreso">
+        <div id="ordProgresoAct">
+        
+        </div>
+    </div>
+
+
+    <div id="ordComplet">
+        <div id="ordCompletAct">
+        
+
+        </div>
+
+    </div>
+
+
+    <div id="perfil">hola</div>-->
+
+    
 
 
     <script src="js/controlador.js"></script>

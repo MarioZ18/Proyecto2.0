@@ -2,17 +2,46 @@
 
 body{
     background-image: url(../img/fondo1.png);
+    
+    
+}
+.top{
+    margin-top: 30px;
+}
+
+.fondoGen{
     background-repeat: no-repeat;
     background-size: 100vw 100vh ;
     background-position: center center ;
     background-attachment: fixed;
     margin: 0;
-    
 }
 
+.fondo2{
+    background-image: url(../img/fondo2.png) !important;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh ;
+    background-position: center center ;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.fondo3{
+    background-image: url(../img/fondo3.png) !important;
+}
+
+.fondo4{
+    background-image: url(../img/fondo4.png) !important;
+}
+
+.fondo5{
+    background-image: url(../img/fondo5.png) !important;
+}
+
+
+
 #iniciarS{
-    /*background-color: rgba(0, 0, 0, 0.5);*/
-   height: auto; /* viewport high alto de a vista*/
+   height: auto; 
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center center ;
@@ -23,10 +52,22 @@ body{
 
 }
 
+#verif{
+    display: flex;
+    justify-content: end;
+    color:#061149;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
 #logoM{
     padding:10px 20px;
     width: 100px;
     size: 1px 1px;
+}
+#logoM2{
+   width: 350px;
+    
 }
 
 .fuenteCu{
@@ -45,7 +86,7 @@ body{
 
 
 #Formulario{
-    background-color: rgba(151, 151, 151, 0.541);
+    background-color: rgba(107, 106, 106, 0.541);
     color: #000000;
     width: 314px;
     height: 560px;
@@ -55,17 +96,6 @@ body{
     margin-right: auto;
     transition: background-color .3s ease-in-out;
 }
-
-
-
-#Formulario h1{
-    margin: 0;
-    font-size: 40px;
-    font-weight: 70px;
-    font-family: 'Melvetica Neue', Melvetica,Arial,sans-serif;
-    margin-bottom: 28px;
-}
-
 
 
 .control{
@@ -83,6 +113,12 @@ body{
 .center{
     display: flex;
     justify-content: center;
+}
+
+.centery{
+    display: flex;
+    align-items: center;
+
 }
 
 .caja-texto{
@@ -103,6 +139,14 @@ body{
     font-size: 23px !important;
 }
 
+.cardEstilos{
+    background-color: #ffffff;
+    font-size: 40px;
+    padding: 0px 150px;
+    border-radius: 50px;
+    border-color: #000000;
+}
+
 
 .boton:hover{
     background-color: black;
@@ -120,12 +164,35 @@ body{
     text-decoration: underline;
 }
 
+
+.sinBord{
+    border-color: transparent;
+    
+}
+
+
+.sinFond{
+    background-color: transparent;
+}
+
+.etiquetas{
+    border-radius: 10px;
+}
+
+
+#iOrdDisp{
+    background-color: #015989;
+}
+
 /*/ Small devices (landscape phones, 576px and up)*/
 @media (max-width: 575.98px) {
 
-    #logo{
-        width: 80px;
+
+    #logoM2{
+    width: 225px;
+        
     }
+
     #Formulario{
         background-color: transparent;
         width: 80%;
@@ -135,6 +202,11 @@ body{
         margin-top: 5px;
         
     } 
+
+    .cardEstilos{
+        font-size: 25px;
+        padding: 0px 80px;
+    }
     
 
     #contenido{
