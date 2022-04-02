@@ -13,6 +13,40 @@ body{
     color: #ffffff;
 }
 
+.fondoAzl{
+    background-color: #015989;
+}
+
+.fondoGris{
+    background-color: #D7D7D7;
+}
+
+.fondoCel{
+    background-color: #ADD9E5;
+}
+
+.fuenteAzul{
+
+    color: #015989;
+}
+
+
+.fuenteOD{
+    font-size: 15px !important;
+}
+
+.fBlanco{
+    background-image: url(../img/fBlanco.jpg);
+}
+
+.inv{
+    visibility: hidden;
+}
+
+.heFran{
+    height: 15px;
+}
+
 .fondoGen{
     background-repeat: no-repeat;
     background-size: 100vw 100vh ;
@@ -21,28 +55,58 @@ body{
     margin: 0;
 }
 
-.fondo2{
-    background-image: url(../img/fondo2.png) !important;
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh ;
-    background-position: center center ;
-    background-attachment: fixed;
-    margin: 0;
-}
 
-.fondo3{
-    background-image: url(../img/fondo3.png) !important;
+.fondo2{
+    background-image: url(../img/fondo2.png) ;
 }
 
 .fondo4{
-    background-image: url(../img/fondo4.png) !important;
+    background-image: url(../img/fondo4.png);
 }
 
-.fondo5{
-    background-image: url(../img/fondo5.png) !important;
+.fAzulG{
+ background-image: url(../img/franaz.g.png);
+
+}
+
+.fCelM{
+ background-image: url(../img/franceles.m.png);
+
+}
+.fGrisP{
+ background-image: url(../img/frangri.p.png);
+
+}
+
+.fCianG{
+ background-image: url(../img/francian.g.png);
+
+}
+
+.fGrisM{
+ background-image: url(../img/frangri.m.png);
+
 }
 
 
+.card1{
+    border-radius: 25px;
+}
+
+
+
+.botonAceptarO{
+    width: auto;
+    height: auto;
+    margin-left:auto ;
+    margin-right: 10px;
+  
+}
+
+#sup{
+    display: flex;
+    justify-content: space-between;
+}
 
 #iniciarS{
    height: auto; 
@@ -74,6 +138,15 @@ body{
     
 }
 
+#logoM3{
+    width: 350px;
+     
+ }
+
+.puntero{
+    cursor: pointer;
+}
+
 .fuenteCu{
     font-family: 'Cuprum', sans-serif;
     font-size: 20px;
@@ -86,6 +159,11 @@ body{
 .fuenteBe{
     font-family: 'Bebas Neue', cursive;
      
+}
+
+.subT{
+    color:#015989;
+    size: 5px !important;
 }
 
 
@@ -142,6 +220,16 @@ body{
     padding: 10px 25px;
     font-size: 23px !important;
 }
+
+
+
+#d1{
+    width: 70%;
+    height: 200px;
+    overflow: scroll;
+
+}
+
 
 .cardEstilos{
     background-color: #ffffff;
@@ -205,6 +293,15 @@ body{
         
     }
 
+    #logoM3{
+        width: 250px;
+            
+    }
+
+    .ic{
+        font-size: 1.2em !important;
+    }
+
     #Formulario{
         background-color: transparent;
         width: 80%;
@@ -228,6 +325,18 @@ body{
     }
     #tp{
         display: none;
+    }
+
+    .fondo3{
+        background-image: url(../img/fondo3p.png) !important;
+    }
+
+    .fondo5{
+        background-image: url(../img/fondo5p.png) !important;
+    }
+
+    .fondo6{
+        background-image: url(../img/fondo6p.png) !important;
     }
 
  }

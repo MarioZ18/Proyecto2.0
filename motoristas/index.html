@@ -12,9 +12,38 @@
 
 </head>
 <body id="fondo" class="fondoGen">
-    <div>
-       Motoristas
+
+   
+    <nav class="navbar navbar-expand py-1" id="opciSup">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <button class="btn my-0 my-sm-0" style="padding: 5px 10px 0px 10px ; margin-left: 15px;" type="button" data-toggle="modal" data-target="#buscador" >
+                <i class="fa-solid fa-bars fa-2x ic"></i>
+            </button>
+
+
+            <button class="btn my-0 my-sm-0" style="padding: 5px 10px 0px 10px; margin-left: auto; margin-right: 15px;" type="button" data-toggle="modal" data-target="#buscador" >
+                <i class="fa-solid fa-arrow-left fa-2x ic"></i>
+            </button>
+        </div>
+        
+    </nav>
+    <div id="logoP">
+        <div class="fondoAzl center">    
+            <img id="logoM2" src="img/StorekMotor1.0.png" >
+    
+        </div>
+    
+        <div id="franjas">
+           
+        </div>
+        
     </div>
+
+    
+
+
     <div id="iniciarS">
 
         <section id="Formulario">
@@ -37,33 +66,35 @@
         </section>
     </div>
 
+
+
+
+
     <div id="inicioMoto" class="top">
 
+        <div id="logoIni">
+            <div class="center">
+                <img id="logoM2" src="img/StorekMotor1.0.png" >
+            </div>
+        
+            <div class="center fuenteCu titulo ">
+                <div class="card cardEstilos">Motoristas</div>
+                
+            </div>
+          </div>
 
-        <div class="center">
-            <img id="logoM2" src="img/StorekMotor1.0.png" >
-        </div>
-
-        <div class="center fuenteCu titulo ">
-            <div class="card cardEstilos">Motoristas</div>
-            
-        </div>
-
-        <br>
-
-    
 
        <div class="container-fluid">
             <div class=" row center">
-                <div class="col-10 col-sm-10 col-md-5 col-xl-4"  >
+                <div class="col-10 col-sm-10 col-md-5 col-xl-4" >
                     <div class="card  mb-3 sinBord sinFond" >  
                         <div class=" row center">                     
                             <div class="  col-4 py-2 center ">
-                                <div  id="iOrdDisp" class="card etiquetas px-2 py-3">
+                                <div  id="iOrdDisp" class="card etiquetas px-2 py-3 puntero" onclick="ordenesDisp();" >
                                     <i class="fa-solid fa-boxes-packing fa-3x"></i>
                                 </div>  
                             </div>
-                            <div class="col-8 centery fuenteCu" >
+                            <div class="col-8 centery fuenteCu puntero" onclick="ordenesDisp();" >
                                 Ordenes Disponibles
                             </div>
                         </div>
@@ -82,7 +113,7 @@
                                 </div>     
                             </div>
                             <div class="col-8 centery fuenteCu" >
-                                Ordenes en Progeso
+                                Ordenes en Progreso
                             </div>
                         </div>
                         
@@ -113,6 +144,35 @@
 
     </div>
 
+
+    <div id="ordDispon">
+
+        <div id="tituloOD" class="center fuenteCu" >
+            
+        </div>
+
+        <div id="subTOD" class="center fuenteCu subT">
+            
+        </div>
+
+        <div id="listaOD">
+            <div  class="container-fluid">
+                <div id="pedidos" class="row">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="detallesOD" class="center">  
+                     
+        </div>
+
+        <div id="aceptadoOD">
+
+        </div>
+        
+
+    </div>
     
     <!--<div id="opcionesLateral">hola</div>
 
@@ -126,13 +186,7 @@
     <div id="preguntas">hola</div>
 
 
-    <div id="ordDispon">
-        <div id="ordDisponAct">
-        
-
-        </div>
-
-    </div>
+    
 
 
     <div id="ordProgreso">
