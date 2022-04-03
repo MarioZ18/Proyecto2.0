@@ -16,15 +16,20 @@
    
     <nav class="navbar navbar-expand py-1" id="opciSup">
         
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse">
             
-            <button class="btn my-0 my-sm-0" style="padding: 5px 10px 0px 10px ; margin-left: 15px;" type="button" data-toggle="modal" data-target="#buscador" >
+            <button id="barraOpc" class="btn my-0 my-sm-0 black" style="padding: 5px 10px 0px 10px ; margin-left: 15px;" type="button" onclick="barraLateralA();" >
                 <i class="fa-solid fa-bars fa-2x ic"></i>
             </button>
 
 
-            <button class="btn my-0 my-sm-0" style="padding: 5px 10px 0px 10px; margin-left: auto; margin-right: 15px;" type="button" data-toggle="modal" data-target="#buscador" >
+            <button id="atras" class="btn my-0 my-sm-0 black" style="padding: 5px 10px 0px 10px; margin-left: auto; margin-right: 15px;" type="button" onclick="volverAtras();" >
                 <i class="fa-solid fa-arrow-left fa-2x ic"></i>
+            </button>
+
+
+            <button id="preguntas" class="btn my-0 my-sm-0 black" style="padding: 5px 10px 0px 10px; margin-left: auto; margin-right: 15px;" type="button" >
+                <i class="fa-regular fa-circle-question fa-2x ic"></i>
             </button>
         </div>
         
@@ -57,7 +62,7 @@
 
             <br>
             <br>
-            <input class="control caja-texto fuenteSa" id="correoMotor" type="text" placeholder="Dirección de Correo">
+            <input class="control caja-texto fuenteSa" id="correoMotor" type="text" placeholder="Dirección de Correo" >
             <input class="control caja-texto fuenteSa" id="contraMotor" type="password" placeholder="Contraseña">
             <div id="verif" class="fuente1"></div>
             <div class="center fuenteBe"><input class="control boton"type="button" value="Iniciar Sesión" onclick="validarMoto();"></div>
@@ -112,7 +117,7 @@
                                     <i class="fas fa-clipboard-list fa-4x"></i>
                                 </div>     
                             </div>
-                            <div class="col-8 centery fuenteCu" >
+                            <div class="col-8 centery fuenteCu puntero" onclick="ordenesPro();">
                                 Ordenes en Progreso
                             </div>
                         </div>
@@ -130,7 +135,7 @@
                                     <i class="fa-solid fa-clipboard-check fa-4x"></i>
                                 </div> 
                             </div>
-                            <div class="col-8 centery fuenteCu" >
+                            <div class="col-8 centery fuenteCu puntero" onclick="ordenesCompl();" >
                                 Ordenes Completadas
                             </div>
                         </div>
@@ -141,6 +146,151 @@
        </div>
 
 
+
+    </div>
+
+
+
+
+
+    <div id="barraLat" >
+        <nav class="navbar navbar-expand py-1" id="opciSupL">
+        
+            <div class="collapse navbar-collapse">
+                
+                <button id="ajustes" class="btn my-0 my-sm-0 black" style="padding: 5px 10px 0px 10px ; margin-left: 15px;" type="button" >
+                    <i class="fa-solid fa-gear fa-2x ic"></i>
+                </button>
+    
+    
+                <button id="barraOpc" class="btn my-0 my-sm-0 black" style="padding: 5px 10px 0px 10px; margin-left: auto; margin-right: 15px;" type="button" onclick="barraLateralC();" >
+                    <i class="fa-solid fa-bars fa-2x ic"></i>
+                </button>
+            </div>
+            
+        </nav>
+
+
+
+        <div class="container-fluid">
+            <div class=" row center">
+
+                <div class="col-12 " >
+                    <div class="card  mb-4 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-3 py-2 center ">
+                                <div  id="usActL" class="card puntero black fBlack redondo" onclick="nada3();" >
+                                    <i  class="fa-solid fa-user-large fa-3x ic3 fuenteAzul"></i>   
+                                </div>  
+                            </div>
+                            <div id="perfilActual"  class="col-9 centery fuenteCu puntero">
+                                
+                                <div id="nombreActual">
+                                   
+                                </div>
+                                <br>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+
+                <div class="col-10 " >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery">
+                                <div  id="iOrdDispL" class="card puntero black sinBord sinFond" onclick="ordenesDisp();" >
+                                    <i class="fa-solid fa-boxes-packing fa-3x ic2"></i>
+                                </div>  
+                            </div>
+                            <div class="col-8 centery fuenteCu puntero" onclick="ordenesDisp();" >
+                                Ordenes Disponibles
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+
+                <div class="col-10 "  >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery">
+                                <div  id="iOrdProL" class="card puntero black sinBord sinFond">
+                                    <i class="fas fa-clipboard-list fa-3x ic2"></i>
+                                </div>     
+                            </div>
+                            <div class="col-8 centery fuenteCu" >
+                                Ordenes en Progreso
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <br>
+                <hr>
+
+                <div class="col-10 "  >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery ">
+                                <div  id="iOrdComL" class="card puntero black sinBord sinFond">
+                                    <i class="fa-solid fa-clipboard-check fa-3x ic2"></i>
+                                </div> 
+                            </div>
+                            <div class="col-8 centery fuenteCu" >
+                                Ordenes Completadas
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="col-10 "  >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery">
+                                <div  id="reportarL" class="card  puntero black sinBord sinFond">
+                                    <i class="fa-solid fa-headset fa-3x ic2"></i>
+                                    
+                                </div> 
+                            </div>
+                            <div class="col-8 centery fuenteCu" >
+                                Reportar un Problema
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <hr>
+
+                <div class="col-10 "  >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery">
+                                <div  id="soporteL" class="card py-2 px-3  puntero black sinBord sinFond">
+                                    <i class="fa-regular fa-circle-question fa-3x ic2"></i>
+                                </div> 
+                            </div>
+                            <div class="col-8 centery fuenteCu" >
+                                Soporte
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+       </div>
 
     </div>
 
@@ -164,17 +314,211 @@
         </div>
 
         <div id="detallesOD" class="center">  
-                     
+
+            
         </div>
 
-        <div id="aceptadoOD">
-
-        </div>
         
 
     </div>
     
-    <!--<div id="opcionesLateral">hola</div>
+
+
+    <div id="ordProgreso">
+
+        <div id="tituloOP" class=" fuenteCu" style="margin-left: 10%; margin-right: 10%; margin-top: 10px;" >
+            
+        </div>
+
+        <div id="listaOP">
+            <div  class="container-fluid">
+                <div id="pedidosPro" class="row">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="detallesOP" class="center"> 
+            
+            <div  class="container-fluid">
+                <div class="row center">
+                    <div class="col-10" >
+                        <div id="DetaPedidoProAct" class="center fuenteCu">
+                            <div id="fact2" class="card p-3" >
+                                <div class="card-title">Estado del Pedido:</div>
+                                <div class="card-body center">
+                                    <div >
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    Pedido Tomado 
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="pedToma" value="">
+                                                </div>
+                                                <br>|
+                                                <br>|
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    Pedido Procesado 
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="pedProc" value="">
+                                                </div>
+                                                <br>|
+                                                <br>|
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <div>
+                                                    En Camino
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="ProdEnCam" value="">
+                                                </div>
+                                                <br>|
+                                                <br>|
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <div>
+                                                    Entregado
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="prodEntr" value="">
+                                                </div>
+                                            </li>
+                                            <br>
+                                        </ul> 
+                                    </div>  
+                                </div>
+                                <div id="ubicacionOP">
+
+                                </div>
+                                <div id="btnFact">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div id="facturaOP" class="center">  
+            <div id="productosOP" >
+
+            </div>
+            <div id="totalOP" style="margin-left: 10%; margin-right: 10%;">
+
+            </div>
+            <div id="btnEntregado">
+
+            </div>
+            
+        </div>
+
+        <div id="detallesEntregaOP" class="center facturaOrdenL fondoCian"  style="margin-left: 10%; margin-right: 10%;">  
+
+            hola
+        </div>
+
+    </div>
+
+
+    <div id="ordComplet">
+        <div id="tituloOC" class=" fuenteCu" style="margin-left: 10%; margin-right: 10%; margin-top: 10px;" >
+            
+        </div>
+
+        <div id="listaOC">
+            <div  class="container-fluid">
+                <div id="pedidosCom" class="row">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="detallesOC" class="center"> 
+            
+            <div  class="container-fluid">
+                <div class="row center">
+                    <div class="col-10" >
+                        <div id="DetaPedidoProActC" class="center fuenteCu">
+                            <div id="fact3" class="card p-3 sinBord" >
+                                <div class="card-title">Estado del Pedido:</div>
+                                <div class="card-body center">
+                                    <div >
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    Pedido Tomado 
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="pedToma" value="" checked disabled>
+                                                </div>
+                                                <br>|
+                                                <br>|
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    Pedido Procesado 
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="pedProc" value="" checked disabled>
+                                                </div>
+                                                <br>|
+                                                <br>|
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <div>
+                                                    En Camino
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="ProdEnCam" value="" checked disabled>
+                                                </div>
+                                                <br>|
+                                                <br>|
+                                            </li>
+                                            <br>
+                                            <li>
+                                                <div>
+                                                    Entregado
+                                                    <input class="form-check-input bordBlack" type="checkbox" id="prodEntr" value="" checked disabled>
+                                                </div>
+                                            </li>
+                                            <br>
+                                        </ul> 
+                                    </div>  
+                                </div>
+                                <div id="ubicacionOC">
+
+                                </div>
+                                <div id="btnFactC">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detallesEntregaOC" class="center facturaOrdenL mt-3"  style="margin-left: 10%; margin-right: 10%;">  
+
+            
+            </div>
+
+            
+        </div>
+
+        <div id="facturaOC" class="center">  
+            <div id="productosOC" >
+
+            </div>
+            <div id="totalOC" style="margin-left: 10%; margin-right: 10%;">
+
+            </div>
+            <div id="btnCompl">
+
+            </div>
+            
+        </div>
+
+        
+
+    </div>
+
+    <!--
 
 
     <div id="ajustes">hola</div>
@@ -189,20 +533,10 @@
     
 
 
-    <div id="ordProgreso">
-        <div id="ordProgresoAct">
-        
-        </div>
-    </div>
+    
 
 
-    <div id="ordComplet">
-        <div id="ordCompletAct">
-        
-
-        </div>
-
-    </div>
+    
 
 
     <div id="perfil">hola</div>-->

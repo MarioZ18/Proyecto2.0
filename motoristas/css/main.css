@@ -13,8 +13,18 @@ body{
     color: #ffffff;
 }
 
+
+.facturaOrdenL{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
 .fondoAzl{
     background-color: #015989;
+}
+
+.fondoAzlC{
+    background-color: #009DC8;
 }
 
 .fondoGris{
@@ -24,10 +34,21 @@ body{
 .fondoCel{
     background-color: #ADD9E5;
 }
+.fondoCian{
+background-color: #1FBAE4;
+}
+
+.fuenteAm{
+    color: yellow;
+}
 
 .fuenteAzul{
 
     color: #015989;
+}
+
+.bordAzul{
+    border-color: #015989 !important;
 }
 
 
@@ -37,6 +58,14 @@ body{
 
 .fBlanco{
     background-image: url(../img/fBlanco.jpg);
+}
+
+.fBlack{
+    background-image: url(../img/fNegro.jpg);
+}
+
+.redondo{
+    border-radius: 100%;
 }
 
 .inv{
@@ -89,11 +118,48 @@ body{
 }
 
 
-.card1{
+.bordes25{
     border-radius: 25px;
 }
 
+.black{
+    color: #000000 !important;
+}
 
+
+#usActL{
+    border-color: #000000; 
+}
+
+.bordBlack{
+    border-color: #000000;
+}
+
+#barraLat{
+    width: 70%;
+    height: max-content;
+    color: white;
+    background-color:#015989;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+
+}
+
+.fuentePeque{
+    font-size: 20px;
+}
+
+.ic3{
+    padding: 15px;
+}
+
+
+#tomarPed{
+    padding: 5px 10px 5px 10px;
+    font-size: 20px !important;
+}
 
 .botonAceptarO{
     width: auto;
@@ -103,7 +169,12 @@ body{
   
 }
 
-#sup{
+#prodF1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.espacioE{
     display: flex;
     justify-content: space-between;
 }
@@ -223,13 +294,19 @@ body{
 
 
 
-#d1{
+#fact1{
     width: 70%;
     height: 200px;
-    overflow: scroll;
+   overflow-x: hidden;
+    
 
 }
 
+#fact2{
+    width: 70%;
+   font-size: 20px !important;
+
+}
 
 .cardEstilos{
     background-color: #ffffff;
@@ -302,6 +379,15 @@ body{
         font-size: 1.2em !important;
     }
 
+    .ic2{
+        font-size: 1.5em !important;
+    }
+
+    .ic3{
+        font-size: 2em !important;
+        padding: 4px !important;
+    }
+
     #Formulario{
         background-color: transparent;
         width: 80%;
@@ -337,6 +423,21 @@ body{
 
     .fondo6{
         background-image: url(../img/fondo6p.png) !important;
+    }
+
+
+    #barraLat{
+        height: 100vh;
+    }
+
+    .fuentePeque{
+        font-size: 14px;
+    }
+
+    #fact2{
+        width: 70%;
+       font-size: 15px !important;
+    
     }
 
  }
