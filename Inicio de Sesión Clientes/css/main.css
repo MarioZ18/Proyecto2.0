@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    background-image: url(../img/background.png) !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+}
+
+a{
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
+.navbar{
+    background-color: transparent !important;
+}
+
+input{
+    border-color: transparent;
+    border-radius: 6px;
+    block-size: 50px;
+    color: darkgrey;
+}
+
+#colap{
+    background-color: transparent !important;
+}
+
+#logo{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#imglogo{
+    width: 25%;
+}
+@media (min-width: 950px) {
+    #imglogo{
+        width: 10%;
+        }
+}
+
+#usuarioID{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+#contraseñaID{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    margin-top: -1.5rem;
+}
+
+#btnIniciarSes{
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#btnIS{
+    background-color: #7B90A1;
+    border-radius: 30px;
+    width: 8rem;
+    height: 3rem;
+    color: aliceblue !important;
+    border-style: none
+}
+
+#links{
+    color: aliceblue !important;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    text-align: center;
+    text-decoration: underline;
+}
