@@ -249,26 +249,18 @@ function ocultarTodos(){
 
     let ocultarfactOC=document.getElementById('facturaOC');
     ocultarfactOC.style.display='none';
-    
 
-  /*  let ocultar = document.getElementById('iniciarS');
-    ocultar.style.display = 'none';
-
-    let ocultar = document.getElementById('iniciarS');
-    ocultar.style.display = 'none';*/
+    let ocultarLogoI=document.getElementById('logoIni');
+    ocultarLogoI.style.display='none';
 
     let barraL = document.getElementById('barraLat');
     barraL.style.display = 'none';
 
+    let perfil = document.getElementById('perfil');
+    perfil.style.display = 'none';
+
 }
 ocultarTodos();
-
-function mostrarIs(){
-    let mostrarISesion = document.getElementById('iniciarS');
-    mostrarISesion.style.display = 'block';
-}
-
-mostrarIs();
 
 function ocultarLogo(){
 
@@ -298,8 +290,9 @@ ocultarBarraLat();
 
 function mostrarBarraLat(){
     let barra = document.getElementById('barraOpc');
-    barra.style.display = 'none';
+    barra.style.display = 'block';
 }
+
 
 
 function mostrarAtras(){
@@ -350,6 +343,20 @@ function diseño3(){
 }
 
 
+function mostrarIniciarSesión(){
+    ocultarTodos();
+    ocultarBarraLat();
+    ocultarAtras();
+
+    let inS = document.getElementById('iniciarS');
+    inS.style.display = 'block';
+
+    document.getElementById('fondo').classList.remove('fondo2');
+
+    
+}
+
+mostrarIniciarSesión();
 
 
 
@@ -358,6 +365,7 @@ function diseño3(){
 
 /*--------------------------------------------Validad Formularios----------------------------------------------*/
 function validarMoto(){
+    motoristaAct=[];
     var correo= document.getElementById("correoMotor").value
     var contra= document.getElementById("contraMotor").value
     var i=0;
@@ -393,6 +401,8 @@ function pagInicio(){
     ocultarLogo();
     ocultarAtras();
     mostrarBarraLat();
+    let mostrarLogoI=document.getElementById('logoIni');
+    mostrarLogoI.style.display='block';
 
     paginas.splice(pagina);
     var pagina="";
@@ -402,9 +412,10 @@ function pagInicio(){
         }
     paginas.push(pagina);
 
-
+    document.getElementById('fondo').classList.remove('fondo3');
     document.getElementById('fondo').classList.add('fondo2');
     document.getElementById('opciSup').classList.remove('fondoAzl');
+   
 
     let ocultarISesion = document.getElementById('iniciarS');
     ocultarISesion.style.display = 'none';
@@ -572,7 +583,7 @@ function detallesPedidoActual(idP){
     
 
     paginas.push(pagina);
-    console.log('pag',paginas)
+   
 
 
     datosImportant.splice(pagina);
@@ -729,24 +740,19 @@ function agregarPedido(idPedido){
 
             
             if(moto.id==mAc.id){
-/** */
-                console.log('ordenes',ordenes);
                 var i=0;
                 ordenes.forEach(function(pedidos){
                     if(pedidos.idPedido==idPedido){
-                        console.log('ordenes',ordenes[i]);
                         moto.ordenesAceptadas.push(ordenes[i]);
                         pedidos.aceptado=true;
                         ordenes.splice(ordenes[i],1);
                     }
                     i++;
                 })
-               /** */
             }
         })
     })
 
-    console.log('moto',motoristas);
     
 }
 
@@ -858,7 +864,6 @@ function detallesPedidoProgreso(idP,lugarE){
     
 
     paginas.push(pagina);
-    console.log('pag',paginas)
 
 
 
@@ -1089,8 +1094,6 @@ function pedidoFinalizado(id,lEntrega){
 
 }
 
-
-
 /*-----------------------------------Asignacion de la orden finalizada por el motorista-----------------------*/
 
 function agregarPedidoFinal(idPedido){
@@ -1102,8 +1105,6 @@ function agregarPedidoFinal(idPedido){
                 var i=0;
                 moto.ordenesAceptadas.forEach(function(pedidos){
                     if(pedidos.idPedido==idPedido){
-
-                        console.log('ordenes',ordenes[i]);
                         moto.ordenesCompletadas.push(mAc.ordenesAceptadas[i]);
                         pedidos.aceptado=true;
                         moto.ordenesAceptadas.splice(mAc.ordenesAceptadas[i],1);
@@ -1116,7 +1117,7 @@ function agregarPedidoFinal(idPedido){
         })
     })
 
-    console.log('moto',motoristas);
+    
     
 }
 
@@ -1231,7 +1232,6 @@ function detallesPedidoCompletado(idP,lugarE){
     
 
     paginas.push(pagina);
-    console.log('pag',paginas)
 
 
 
@@ -1414,6 +1414,7 @@ function fPedidoCom(idP,l){
 
 
 
+
 /*--------------------------------------Generar la barra lateral----------------------------------------*/
 
 function barraLateralA(){
@@ -1427,7 +1428,7 @@ function barraLateralA(){
         `${mAc.nombre} ${mAc.apellido}
 
         <br>
-        <a id="CerrarS" class="fuentePeque fuenteAm" onclick="nada();">Cerrar Sesión</a>|<a id="CambiarS" class="fuentePeque fuenteAm" onclick="nada2();">Cambiar Cuenta</a>    
+        <a id="CerrarS" class="fuentePeque fuenteAm" onclick="mostrarIniciarSesión();">Cerrar Sesión</a>|<a id="CambiarS" class="fuentePeque fuenteAm" onclick="mostrarIniciarSesión();">Cambiar Cuenta</a>    
         `
     })
 
@@ -1445,38 +1446,63 @@ function barraLateralC(){
 
 
 
+/*-------------------------------------Pefil actual----------------------------------------*/
+
+function perfilActual(){
+    ocultarTodos();
+
+    paginas.splice(pagina);
+    var pagina="";
+
+      pagina= {   
+            paginaActual:'perfil',
+        }
+    paginas.push(pagina);
 
 
+    document.getElementById('fondo').classList.add('fondo3');
+    document.getElementById('opciSup').classList.add('fondoAzl');
+
+    let ocultarISesion = document.getElementById('iniciarS');
+    ocultarISesion.style.display = 'none';
+
+    let barra = document.getElementById('barraOpc');
+    barra.style.display = 'block';
+
+    let mostrarPerfil=document.getElementById('perfil');
+    mostrarPerfil.style.display='block';
 
 
+    motoristaAct.forEach(function(mAc){
+        document.getElementById('nombreMoto').innerHTML =
+        `${mAc.nombre} ${mAc.apellido}`
 
+        document.getElementById('idMotorista').innerHTML =
+        `ID: ${mAc.id}`
+        document.getElementById('correoM').innerHTML =
+        `Correo Electronico:
+        <br>
+        ${mAc.correo}
+        `
+        document.getElementById('telefM').innerHTML =
+        `Telefono:
+        <br>
+        ${mAc.telefono}`
 
+        if(mAc.disponibilidad==true){
+            document.getElementById('checkDis').innerHTML =
+        `<div>
+            <input class="form-check-input" type="checkbox" value="" checked disable>
+        </div>`
 
-
-
-
-
-
-
-
-
-
-
-
-function nada(){
-    var i;
-    console.log('hola','holas')
+        }else{
+            document.getElementById('checkDis').innerHTML =
+        `<div>
+            <input class="form-check-input" type="checkbox" value="" disable>
+        </div>`
+        }  
+    })
 }
-
-function nada2(){
-    var i;
-    console.log('hola','1')
-}
-function nada3(){
-    var i;
-    console.log('hola','2')
-}
-
 function numeroAzar(min, max) {
     return Math.round(Math.random() * (max - min) + min); 
   }

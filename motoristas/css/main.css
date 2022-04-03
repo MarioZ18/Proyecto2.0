@@ -13,7 +13,9 @@ body{
     color: #ffffff;
 }
 
-
+.fuenteGran{
+    font-size: 25px !important;
+}
 .facturaOrdenL{
     margin-left: 10px !important;
     margin-right: 10px !important;
@@ -89,7 +91,7 @@ background-color: #1FBAE4;
     background-image: url(../img/fondo2.png) ;
 }
 
-.fondo4{
+.fondo3{
     background-image: url(../img/fondo4.png);
 }
 
@@ -413,25 +415,16 @@ background-color: #1FBAE4;
         display: none;
     }
 
-    .fondo3{
-        background-image: url(../img/fondo3p.png) !important;
-    }
-
-    .fondo5{
-        background-image: url(../img/fondo5p.png) !important;
-    }
-
-    .fondo6{
-        background-image: url(../img/fondo6p.png) !important;
-    }
-
-
     #barraLat{
         height: 100vh;
     }
 
     .fuentePeque{
         font-size: 14px;
+    }
+
+    .fuenteGran{
+        font-size: 20px;
     }
 
     #fact2{

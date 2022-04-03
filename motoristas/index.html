@@ -75,7 +75,7 @@
 
 
 
-    <div id="inicioMoto" class="top">
+    <div id="inicioMoto">
 
         <div id="logoIni">
             <div class="center">
@@ -86,7 +86,7 @@
                 <div class="card cardEstilos">Motoristas</div>
                 
             </div>
-          </div>
+        </div>
 
 
        <div class="container-fluid">
@@ -179,7 +179,7 @@
                     <div class="card  mb-4 sinBord sinFond" >  
                         <div class=" row center">                     
                             <div class="  col-3 py-2 center ">
-                                <div  id="usActL" class="card puntero black fBlack redondo" onclick="nada3();" >
+                                <div  id="usActL" class="card puntero black fBlack redondo" onclick="perfilActual();" >
                                     <i  class="fa-solid fa-user-large fa-3x ic3 fuenteAzul"></i>   
                                 </div>  
                             </div>
@@ -222,11 +222,11 @@
                     <div class="card  mb-3 sinBord sinFond" >  
                         <div class=" row center">                     
                             <div class="  col-4 py-2 center centery">
-                                <div  id="iOrdProL" class="card puntero black sinBord sinFond">
+                                <div  id="iOrdProL" class="card puntero black sinBord sinFond" onclick="ordenesPro();">
                                     <i class="fas fa-clipboard-list fa-3x ic2"></i>
                                 </div>     
                             </div>
-                            <div class="col-8 centery fuenteCu" >
+                            <div class="col-8 centery puntero fuenteCu" onclick="ordenesPro();">
                                 Ordenes en Progreso
                             </div>
                         </div>
@@ -241,11 +241,11 @@
                     <div class="card  mb-3 sinBord sinFond" >  
                         <div class=" row center">                     
                             <div class="  col-4 py-2 center centery ">
-                                <div  id="iOrdComL" class="card puntero black sinBord sinFond">
+                                <div  id="iOrdComL" class="card puntero black sinBord sinFond" onclick="ordenesCompl();">
                                     <i class="fa-solid fa-clipboard-check fa-3x ic2"></i>
                                 </div> 
                             </div>
-                            <div class="col-8 centery fuenteCu" >
+                            <div class="col-8 centery puntero fuenteCu" onclick="ordenesCompl();" >
                                 Ordenes Completadas
                             </div>
                         </div>
@@ -415,7 +415,6 @@
 
         <div id="detallesEntregaOP" class="center facturaOrdenL fondoCian"  style="margin-left: 10%; margin-right: 10%;">  
 
-            hola
         </div>
 
     </div>
@@ -518,28 +517,113 @@
 
     </div>
 
-    <!--
 
 
-    <div id="ajustes">hola</div>
 
+   
+    <div id="perfil" >
 
-    <div id="soporte">hola</div>
+        <div id="logoPerfil">
+            <div class="center">
+                <img id="logoM3" src="img/StorekMotor2.1.png" >
+            </div>
+        
+            <div class="center fuenteCu titulo ">
+                <div class="card cardEstilos">Motoristas</div>
+                
+            </div>
+        </div>
+        <br>
 
+        <div class="container-fluid">
+            <div class=" row center">
 
-    <div id="preguntas">hola</div>
+                <div class="col-10 " >
+                    <div class="card mb-1 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center ">
+                                <div  id="imagenMAct" class="card puntero black fondoAzl redondo">
+                                    <i  class="fa-solid fa-user-large fa-3x ic3 blanco"></i>   
+                                </div>  
+                            </div>
+                            <div id="perfilActual"  class="col-8 centery fuenteCu fuenteGran">
+                                
+                                <div id="nombreMoto">
+                                   
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
 
+                <div id="idMotorista" class="fuenteGran center fuenteCu"> </div>
+                <br>
 
-    
+                <div class="col-10 " >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery">
+                                <div class="card fuenteAzul sinBord sinFond">
+                                    <i class="fa-solid fa-location-dot fa-3x ic2"></i>
+                                    
+                                </div>  
+                            </div>
+                            <div id="correoM" class="col-8 centery fuenteCu fuenteGran">
+                                 
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
 
+                <br>
+                <hr>
 
-    
+                <div class="col-10 "  >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery">
+                                <div   class="card fuenteAzul sinBord sinFond">
+                                    <i class="fa-solid fa-phone fa-3x ic2"></i>
+                                    
+                                </div>     
+                            </div>
+                            <div id="telefM" class="col-8 centery fuenteCu fuenteGran" >
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
 
+                <br>
+                <hr>
 
-    
-
-
-    <div id="perfil">hola</div>-->
+                <div class="col-10 "  >
+                    <div class="card  mb-3 sinBord sinFond" >  
+                        <div class=" row center">                     
+                            <div class="  col-4 py-2 center centery ">
+                                <div id="checkDis" class="card fuenteAzul sinBord sinFond ic" style="font-size: 40px;">
+                                    
+                                </div> 
+                            </div>
+                            <div class="col-8 centery fuenteCu fuenteGran" >
+                                Disponible
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+       </div>
+       <div  id="cerrarPerfil" class="center fuenteCu mt-3">
+            <button class="btn fondoCel bordAzul bordes25 mb-4 shadow" type="button" onclick="pagInicio();">
+                Aceptar
+            </button>
+        </div>
+    </div>
 
     
 
