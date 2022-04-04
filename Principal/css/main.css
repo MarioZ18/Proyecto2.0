@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    background-image: url(../img/backgroun.png) !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+}
+
+.btn-primary{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.btn-primary:active{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.btn-primary:focus{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.offcanvas-start{
+    width: 220px !important;
+    background-color: #015989 !important;
+}
+
+.row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * 0) !important;
+    margin-left: calc(var(--bs-gutter-x) * 0) !important;
+}
+
+#txtUs{
+    text-align: center;
+}
+
+#imgUsr{
+    width: 3.25rem;
+    padding-right: 0.8rem;
+}
+
+#linkCS{
+    text-decoration: none !important;
+    color: #dad618 !important;
+    font-size:xx-small;
+    margin-left: 2.1rem;
+    margin-top: -1.25rem;
+    margin-bottom: 2rem;
+}
+
+.listaElemento{
+    list-style: none;
+    border-style: solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-width: thin;
+    border-top-width: thin;
+    padding-bottom: 1.3rem;
+    padding-top: 1.3rem;
+    border-bottom-color: lightblue
+}
+
+#listaLink{
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.barra {
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#logoImg{
+    justify-content: center;
+    width: 70%;
+}
+
+#tEv{
+    text-align: center;
+    text-decoration: dashed;
+    font-family: 'Bebas Neue', cursive;
+    font-size: medium;
+}
+
+.tarjetaEvento{
+    display: flex;
+    background-color: #015989;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    align-content: center;
+}
+
+#thmbImg{
+    height: 20vh;
+    width: 80vw;
+    border-radius: 10px;
+}
+
+#titCat{
+    font-family: 'Bebas Neue', cursive;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+#cateCuadro{
+    display: flex;
+    background-color: #015989;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+}
+
+#txtCate{
+    font-family: 'Bebas Neue', cursive;
+    font-size: medium;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+#categorias{
+    text-align: center;
+}
+
+#cateImg{
+    padding: 2rem;
+    width: 10rem;
+}
+
+@media (min-width:700px) {
+    .offcanvas-start{
+        width: 400px !important;
+    }
+
+    #imgUsr{
+        width: 5rem;
+        padding-right: 0.8rem;
+    }
+
+    #txtUs{
+        text-align: left !important;
+        font-size: 2.25rem;
+    }
+
+    #linkCS{
+        text-decoration: none !important;
+        color: #dad618 !important;
+        font-size:small;
+        margin-left: 3rem;
+        margin-top: -1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    #listaLink{
+        font-size: 1.5rem;
+    }
+
+    .listaElemento{
+        list-style: none;
+        border-style: solid;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-width: thin;
+        border-top-width: thin;
+        padding-bottom: 1.6rem;
+        padding-top: 1.6rem;
+        border-bottom-color: lightblue;
+    }
+
+    .barra{
+        padding: 5rem;
+        margin-top: -7rem;
+    }
+
+    .row{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) * -.5);
+        margin-left: calc(var(--bs-gutter-x) * -.5);
+    }
+
+    #logoImg{
+        justify-content: center;
+        width: 50%;
+    }
+
+    #thmbImg{
+        height: 27vh;
+        width: 27vw;
+        border-radius: 10px;
+    }
+}

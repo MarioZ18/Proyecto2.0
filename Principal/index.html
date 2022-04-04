@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <img src="img/5949947.png" alt="" style="width: 2rem;">
+      </a>
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <a href="../Configuracion/index.html"><img src="img/configuarcion.png" alt="" style="width: 1rem;"></a>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="nombreUser">
+            <p id="txtUs"><img src="img/user.png" alt="" id="imgUsr"> Mario Zelaya</p>
+            <div id="linkCS"><a href="../Inicio de Sesión Clientes/index.html" id="linkCS">Cerrar Sesión</a></div>
+            
+          </div>
+          <div class="listaopciones">
+            <div class="listaElemento"><li><a id="listaLink" href="../Quienes Somos/index.html"><img src="img/info.png" alt="" style="width: 1.5rem;"> ¿Quiénes somos?</a></li></div>
+            <div class="listaElemento"><li><a id="listaLink" href="../Pedidos/index.html"><img src="img/pedidos.png" alt="" style="width: 1.5rem;"> Pedidos</a></li></div>
+            <div class="listaElemento"><li><a id="listaLink" href="../Carrito/index.html"><img src="img/carrito.png" alt="" style="width: 1.5rem;"> Mi carrito</a></li></div>
+            <div class="listaElemento"><li><a id="listaLink" href="../Atencion al cliente/index.html"><img src="img/attcliente.png" alt="" style="width: 1.5rem;"> Atención al cliente</a></li></div>
+            <div class="listaElemento"><li><a id="listaLink" href="../FAQ/index.html"><img src="img/faq.png" alt="" style="width: 1.5rem;"> Preguntas frecuentes</a></li></div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="barra col-8">
+            <img id="logoImg" src="img/logo2.png" alt="">
+            <input class="form-control me-2" type="search" placeholder="Realiza una busqueda" aria-label="Search">
+            <button id="btnBsq" class="btn btn-outline-success" type="submit"><img src="img/buscar.png" alt="" style="width: 1.3rem;"></button>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </div>
+
+
+      <div class="row" id="eventos">
+        
+      </div>
+
+      <div id="titCat">Categorías</div>
+
+      <div class="row" id="categorias">
+        
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="js/controlador.js"></script>
+  </body>
+</html>
