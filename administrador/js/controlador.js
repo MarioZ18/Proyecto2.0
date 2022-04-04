@@ -1,4 +1,13 @@
-var empresas=[]
+var empresas=[
+    {
+        nombreE:"pollo",
+        catE:"comida",
+        telefE:"98989898",
+        representanteE:"Joel",
+        RTNE:"00000001",
+        logoE: "img/EmpresaLogo.png"    
+    }
+]
 
 var productos=[]
 
@@ -81,6 +90,9 @@ function ocultarTodos(){
 
     let oListaEmpresa=document.getElementById('listaEmpresas');
     oListaEmpresa.style.display='none';
+
+    let genlistE=document.getElementById('genListaE');
+    genlistE.style.display='none';
 
     /**let oPerfil=document.getElementById('parteSup');
     oParteSup.style.display='none';
@@ -322,4 +334,170 @@ function finalizarAñ(){
 
     })
 
+}
+
+
+
+function eliminarEmpresa(){
+    ocultarTodos();
+
+    let eliminarEmpresa=document.getElementById('eliminarEmpresa');
+    eliminarEmpresa.style.display='block';
+
+    document.getElementById('empresasListaL').value="";
+
+    generarEmpresasL();
+
+}
+
+function generarEmpresas(){
+
+    var nombreEmpresa=document.getElementById('nombEm').value;
+    
+
+    document.getElementById('empresasLista').innerHTML= "";
+
+    empresas.forEach(function(emp){
+        if(nombreEmpresa!=""){
+            if(emp.nombreE==nombreEmpresa){
+                document.getElementById('empresasLista').innerHTML+=
+                `
+                <option>Nombre Empresa:${emp.nombreE}, Categoría:${emp.catE}</option>
+                                
+                `
+            }
+
+        }else{
+            document.getElementById('empresasLista').innerHTML+=
+            `
+            <option>Nombre Empresa:${emp.nombreE}, Categoría:${emp.catE}</option>
+                            
+            `
+        }
+
+
+    })
+
+}
+
+function generarEmpresasL(){
+
+    var nombreEmpresa=document.getElementById('nombEmL').value;
+    
+
+    document.getElementById('empresasListaL').innerHTML= "";
+
+    empresas.forEach(function(emp){
+        if(nombreEmpresa!=""){
+            if(emp.nombreE==nombreEmpresa){
+                document.getElementById('empresasListaL').innerHTML+=
+                `
+                <option>Nombre Empresa:${emp.nombreE}, Categoría:${emp.catE}</option>
+                                
+                `
+            }
+
+        }else{
+            document.getElementById('empresasListaL').innerHTML+=
+            `
+            <option>Nombre Empresa:${emp.nombreE}, Categoría:${emp.catE}</option>
+                            
+            `
+        }
+
+
+    })
+
+}
+
+function eliminar(){
+    var empresaElim=document.getElementById('empresasListaL').value
+    console.log('empresa',empresaElim)
+
+    var i=0;
+    empresas.forEach(function(emp){
+        if(empresaElim!=""){
+            if(empresaElim=="Nombre Empresa:"+emp.nombreE+", Categoría:"+emp.catE){
+                
+                console.log('empresa','hola')
+
+                empresas.splice(empresas[i],1)
+            }
+
+        }else{
+           
+        }
+
+        i++;
+    })
+
+    eliminarEmpresa();
+}
+
+function genListaEmpresas(){
+    ocultarTodos();
+
+    let listE=document.getElementById('listaEmpresas');
+    listE.style.display='block';
+    let genlistE=document.getElementById('genListaE');
+    genlistE.style.display='block';
+    let detaE=document.getElementById('datosEmpresa');
+    detaE.style.display='none';
+
+    document.getElementById('empresasLista').value="";
+    generarEmpresas();
+
+
+}
+
+function verDEm(){
+
+    let a=document.getElementById('genListaE');
+    a.style.display='none';
+    
+    let detaE=document.getElementById('datosEmpresa');
+    detaE.style.display='block';
+    
+
+    var listaE=document.getElementById('empresasLista').value
+    
+
+
+    var i=0;
+    empresas.forEach(function(emp){
+        if(listaE!=""){
+            if(listaE=="Nombre Empresa:"+emp.nombreE+", Categoría:"+emp.catE){
+                document.getElementById('logoESel').innerHTML =
+                    `
+                    
+                    <div class="centerx p-3 cuprum">
+                    Logo
+                    <br>
+                        <img src="${emp.logoE}" class="card-img py-1" alt="Imagen Empresa" >
+                    </div>
+                    `
+
+                    document.getElementById('datosESel').innerHTML =
+                    `
+                    Nombre de la Empresa: ${emp.nombreE}
+                    <br>
+                    Categoria: ${emp.catE}
+                    <br>
+                    Numero de Telefono:${emp.telefE}
+                    <br>
+                    Representante: ${emp.representanteE}
+                    <br>
+                    RTN: ${emp.RTNE}
+                    `
+                console.log('g','g')
+                
+            }
+
+        }else{
+            let detaE=document.getElementById('datosEmpresa');
+            detaE.style.display='none';
+        }
+
+        i++;
+    })
 }

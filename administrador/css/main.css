@@ -185,6 +185,20 @@
     display: flex;
 }
 
+.selectLista{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:  15px;
+    margin-bottom: 10px;
+    border-color: #000000 !important;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.anchoSelecList{
+    width: 600px;
+}
+
 
  /*---------------------------------------@media--------------------------------------------*/
  @media (max-width: 575.98px) {
