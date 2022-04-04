@@ -13,16 +13,32 @@
     background-image: url(../img/fondoAdmIS.png);
 }
 
-.fondoApp{
-    background-image: url(../img/fondoBlanco.jpg);
-}
-
 .sinFondo{
     background-color: transparent;
 }
 
 .fondoBlanco{
     background-color: white;
+}
+
+.fondoAzul{
+    background-color: #015989;
+}
+
+.fondoAzulP{
+    background-color: #6697B2;
+}
+
+.fondoCeleste{
+    background-color: #ADD9E5;
+}
+
+.fondoGris{
+    background-color: #D7D7D7;
+}
+
+.fondoGrisO{
+    background-color: #949494;
 }
 
 /*---------------------------------Fuentes------------------------------*/
@@ -51,6 +67,13 @@
     border-color: transparent;
 }
 
+.bordesAzul{
+    border-color: #015989 !important;
+}
+
+.bordRedo{
+    border-radius: 25px;
+}
 
 
 
@@ -78,7 +101,13 @@
     color: black;
 }
 
+.fuenteAzul{
+    color: #015989;
+}
 
+.fuenteGris{
+    color: #949494;
+}
 /*---------------------------------Estilos por id------------------------------*/
 
 #formularioIS{
@@ -92,9 +121,8 @@
 }
 
 #logo{
-    padding:10px 20px;
     width: 100px;
-    size: 1px 1px;
+    height: 100px;
 }
 
 #btnAcceder{
@@ -109,11 +137,24 @@
 }
 
 #btnAcceder:hover{
-    background-color: #009DC8;
+    background-color: #005dc8;
     text-decoration: underline;
 }
 
 
+#lineaV{
+    background-color: black;
+    height: 105%;
+    margin-left: -4px;
+}
+
+#cLineaV{
+    padding: 8px 12px;
+}
+
+#logoSuperior{
+    width: 250px; 
+ }
 
  /*---------------------------------Estilos por otras clases------------------------------*/
 
@@ -133,6 +174,17 @@
     width: 400px;
 }
 
+.impForm{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:  15px;
+    margin-bottom: 10px;
+    border-color: #000000 !important;
+    border-radius: 30px;
+    background-color: #ffffff;
+    display: flex;
+}
+
 
  /*---------------------------------------@media--------------------------------------------*/
  @media (max-width: 575.98px) {
@@ -150,21 +202,17 @@
         width: 100%;
     }
 
-    #logoM{
+    #logo{
         padding:10px 20px;
-        width: 100px;
-        size: 1px 1px;
+        
     }
 
-    #logoM2{
+    #logoSuperior{
     width: 225px;
         
     }
 
-    #logoM3{
-        width: 250px;
-            
-    }
+    
 
     .ic{
         font-size: 1.2em !important;

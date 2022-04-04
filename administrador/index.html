@@ -12,6 +12,16 @@
 
 </head>
 <body id="fondo" class="fondos">
+    <nav class="navbar navbar-expand" style="padding: 0;" id="parteSup">
+        
+        <div class="collapse navbar-collapse fondoAzul centerx pt-3" >
+            
+            <div id="logoAdm">
+                <img id="logoSuperior" src="img/StorekAdm.png" >   
+            </div>
+        </div>
+        
+    </nav>
 
     <div id="iniciarSes" class="mt-4 centerx">
 
@@ -24,13 +34,355 @@
             <br>
             <input class="imp anchoImp sanchez" id="correoAdm" type="text" placeholder="Dirección de Correo" >
             <input class="imp anchoImp sanchez" id="contraAdm" type="password" placeholder="Contraseña">
-            <div id="verificación" class="fuente1"></div>
-            <div class="centerx bebas"><input id="btnAcceder" class="sinBorde shadow" type="button" value="Acceder" ></div>
+            <div id="verificacion" class="fuente1"></div>
+            <div class="centerx bebas"><input id="btnAcceder" class="sinBorde shadow" type="button" value="Acceder" onclick="validarCuentaAdm();"></div>
             <br>
             
         </section>
     </div>
 
+
+    <div id="inicioAdm">
+
+       <div class="container-fluid">
+            <div class=" row">
+                <div class="col-12" style="height: auto;">
+                    <div class=" row">                     
+                        <div class="  col-3  centerx" style="padding-left: 10px; height: auto;">
+                            <div class=" row">
+                                <div class="col-12 py-2 centerx" >
+                                    <img id="logo" src="img/logo.png" >
+                                </div>
+
+                                <div id="inicioWL" class="col-12 puntero py-2 centery " onclick="inicioAdm();">
+                                    <i class="fa-solid fa-house fa-3x fuenteAzul"></i>
+                                    Inicio 
+                                </div>
+                                <div id="empresasL" class="col-12 puntero py-2 centery " onclick="empresasAdm();" >
+                                    <i class="fa-solid fa-building fa-3x fuenteAzul"></i>
+                                    Empresas
+                                </div>
+                                <div id="productosL" class="col-12 puntero py-2 centery " >
+                                    <i class="fa-solid fa-box fa-3x fuenteAzul"></i>
+                                    Productos
+                                </div>
+                                <div id="motoristasL" class="col-12 puntero py-2 centery " >
+                                    <i class="fa-solid fa-person-biking fa-3x fuenteAzul"></i>
+                                    Motoristas
+                                </div>
+                                <div id="pedidosL" class="col-12 puntero py-2 centery " >
+                                    <i class="fa-solid fa-clipboard-list fa-3x fuenteAzul"></i>
+                                    Pedidos
+                                </div>
+                                <div id="perfilL" class="col-12 puntero py-2 centery " >
+                                    <i class="fa-regular fa-user fa-3x fuenteAzul"></i>
+                                    Perfil
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="col-1 " style="width: 1px; padding-top: 2%;">
+                            <div  id="lineaV" class="centery">
+
+                            </div>
+                        </div> 
+
+                       
+                        <div class="col-8 fuenteCu">
+
+                            <div id="inicioW">
+
+                                <div class="container-fluid">
+                                    <div class="row centerx mt-4">
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="card fondogris shadow my-1 puntero" >
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Empresas</h5>
+                                                    </div>
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-building fa-3x fuenteAzul"></i>
+                                                    </div>
+        
+                                                    <div id="nEmpresas"></div>
+                                                    
+                                                    
+                                                 </div>
+                                            </div>
+                                        </div>
+
+                                    
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="card fondogris shadow my-1 puntero" >
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Productos</h5>
+                                                    </div>
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-box fa-3x fuenteAzul"></i>
+                                                    </div>
+        
+                                                    <div id="nEmpresas"></div>
+                                                    
+                                                    
+                                                 </div>
+                                            </div>
+                                        </div>
+
+                                   
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="card fondogris shadow my-1 puntero" >
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Motoristas</h5>
+                                                    </div>
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-person-biking fa-3x fuenteAzul"></i>
+                                                    </div>
+        
+                                                    <div id="nEmpresas"></div>
+                                                    
+                                                    
+                                                 </div>
+                                            </div>
+                                        </div>
+
+                                   
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="card fondogris shadow my-1 puntero" >
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Pedidos</h5>
+                                                    </div>
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-clipboard-list fa-3x fuenteAzul"></i>
+                                                    </div>
+        
+                                                    <div id="nEmpresas"></div>
+                                                    
+                                                    
+                                                 </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div id="empresas">
+
+                                <div class="container-fluid">
+                                    <div class="row centerx mt-4">
+                                        <div class="col-12 col-md-6">
+                                            <div class="card fondogris shadow my-1 puntero"  onclick="añadirEmpresa();">
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-building-circle-arrow-right fa-5x fuenteAzul"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Añadir Empresas</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    
+                                        <div class="col-12 col-md-6">
+                                            <div class="card fondogris shadow my-1 puntero" >
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-building-circle-xmark fa-5x fuenteAzul"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Eliminar Empresas</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                   
+                                        <div class="col-12 col-md-6">
+                                            <div class="card fondogris shadow my-1 puntero" >
+                                                <div class="card-body centerx">
+        
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-building-circle-check fa-5x fuenteAzul"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Lista de Empresas</h5>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             
+
+                            </div>
+
+                            <div id="añadirEmpresa">    
+                                <h3>Añadir Empresa</h3>
+
+                                <div id="formAñadirE">
+
+                                    <div>
+                                        Nombre de la Empresa:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="nombAñEm" type="text">
+
+                                    </div>
+                                    <div>
+                                        Categoría de la Empresa:
+                                        <br>
+                                        <select id="catAñEm" class="impForm anchoImp sanchez form-select">
+                                            <option selected> </option>
+                                            <option>Comida</option>
+                                            <option>Tiendas y Supermercados</option>
+                                            <option>Farmacia</option>
+                                            <option>Herramientas</option>
+                                            <option>Libreria y Papelería</option>
+                                            <option>Electronicos</option>
+                                            <option>Belleza y Cuidado Personal</option>
+                                            <option>Café y Panadería</option>
+                                        </select>
+
+                                    </div>
+                                    <div>
+                                        PBX | Numero de Telefono:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="telefAñEm" type="number" >
+
+                                    </div>
+                                    <div>
+                                        Representante de la Empresa:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="repreAñEm" type="text">
+
+                                    </div>
+                                    <div>
+                                        RTN:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="rtnAñEm" type="number" >
+
+                                    </div>
+                                    <div>
+                                        URL Logo de la Empresa:
+                                        <input class="impForm anchoImp sanchez" id="logoAñEm" type="text">
+
+                                    </div>
+                                    <div class="centerx">
+                                        <button class="btn cuprum fondoCeleste bordesAzul bordesRedo mb-4 shadow" type="button" onclick="revisarEmpresaAñ();">
+                                            Continuar
+                                        </button>
+                                    </div>
+                                    
+
+                                </div>
+
+                                <div id="revisAñadorE" >
+                                    <div class="container mt-5">
+                                        <div class="col-12 ">
+                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris center " >  
+                                                <div class=" row center">                     
+                                                    <div id="logoRevE" class="col-4 center centery">
+                                                         
+                                                    </div>
+                                                    <div id="datosRevE" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                        
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="centerx">
+                                        <button  class="btn cuprum fondoGrisO sinBorde bordesRedo m-2 shadow" type="button" onclick="empresasAdm();">
+                                            Cancelar
+                                        </button>
+
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="finalizarAñ();">
+                                            Aceptar
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div id="eAñadida">
+                                    <div class="container mt-5">
+                                        <div class="col-12 p-4">
+                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris center " >  
+                                                <div id="eFAñadida" class="fuenteGris centerx">                     
+                                                    
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="centerx">
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="empresasAdm();">
+                                            Finalizar
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div id="eliminarEmpresa">
+                                
+                            </div>
+
+                            <div id="listaEmpresas">
+                                
+                            </div>
+
+                            <div id="productos">
+                                <i class="fa-solid fa-box fa-3x"></i>
+                                Productos
+                            </div>
+
+
+
+                            <div id="motoristas">
+                                <i class="fa-solid fa-person-biking fa-3x"></i>
+                                Motoristas
+                            </div>
+
+
+
+                            <div id="pedidos">
+                                <i class="fa-solid fa-clipboard-list fa-3x"></i>
+                                Pedidos
+                            </div>
+
+
+
+                            <div id="perfil">
+                                <i class="fa-regular fa-user fa-3x"></i>
+                                Perfil
+                            </div>
+                            </div>
+
+
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
 
 
 
