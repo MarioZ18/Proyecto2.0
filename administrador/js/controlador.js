@@ -9,13 +9,24 @@ var empresas=[
     }
 ]
 
-var productos=[]
+var productos=[{
+    nombreProd:'pollo',
+    precProd:'20',
+    catProd:'comida',
+    emProd:'pollo',
+    dispProd:true,
+    sucurPro: 'Centro',  
+    descProd:'Lorem ipsum dolor sit amet consectetur adipisicing elit .',
+    imgProd:'img/productos.png',
+       
+}]
 
 var administas=[]
 
 var pedidos=[]
 
 var empresaAñadir=[]
+var productoAñadir=[]
 
 var perfiles=[
     {
@@ -93,6 +104,18 @@ function ocultarTodos(){
 
     let genlistE=document.getElementById('genListaE');
     genlistE.style.display='none';
+
+    let oAñadirProd=document.getElementById('añadirProducto');
+    oAñadirProd.style.display='none';
+
+    let oEliminarProd=document.getElementById('eliminarProducto');
+    oEliminarProd.style.display='none';
+
+    let oListaProd=document.getElementById('listaProductos');
+    oListaProd.style.display='none';
+
+    let genlistProd=document.getElementById('genListaE');
+    genlistProd.style.display='none';
 
     /**let oPerfil=document.getElementById('parteSup');
     oParteSup.style.display='none';
@@ -262,7 +285,7 @@ function revisarEmpresaAñ(){
     document.getElementById('logoRevE').innerHTML =
     `
     
-    <div class="centerx p-3 cuprum">
+    <div class=" p-3 cuprum">
     Logo
     <br>
         <img src="${urlAñE}" class="card-img py-1" alt="Imagen Empresa" >
@@ -344,7 +367,7 @@ function eliminarEmpresa(){
     let eliminarEmpresa=document.getElementById('eliminarEmpresa');
     eliminarEmpresa.style.display='block';
 
-    document.getElementById('empresasListaL').value="";
+    /*document.getElementById('empresasListaL').value="";*/
 
     generarEmpresasL();
 
@@ -452,8 +475,8 @@ function genListaEmpresas(){
 
 function verDEm(){
 
-    let a=document.getElementById('genListaE');
-    a.style.display='none';
+    let lEmp=document.getElementById('genListaE');
+    lEmp.style.display='none';
     
     let detaE=document.getElementById('datosEmpresa');
     detaE.style.display='block';
@@ -470,7 +493,7 @@ function verDEm(){
                 document.getElementById('logoESel').innerHTML =
                     `
                     
-                    <div class="centerx p-3 cuprum">
+                    <div class=" p-3 cuprum">
                     Logo
                     <br>
                         <img src="${emp.logoE}" class="card-img py-1" alt="Imagen Empresa" >
@@ -496,6 +519,340 @@ function verDEm(){
         }else{
             let detaE=document.getElementById('datosEmpresa');
             detaE.style.display='none';
+            let lEmp=document.getElementById('genListaE');
+            lEmp.style.display='block';
+        }
+
+        i++;
+    })
+}
+
+/*--------------------------------------------Pagina de Productos----------------------------------------------*/
+
+function productosAdm(){
+
+    ocultarTodos();
+    ocultarSelec();
+    document.getElementById('productosL').classList.add('fondoAzulP');
+
+    let inicioW=document.getElementById('inicioW');
+    inicioW.style.display='none';
+
+    let producs=document.getElementById('productos');
+    producs.style.display='block';
+}
+
+function añadirProducs(){
+    ocultarTodos();
+    let añadirEmpresa=document.getElementById('añadirProducto');
+    añadirEmpresa.style.display='block';
+
+    let formAñEm=document.getElementById('formAñadirProd');
+    formAñEm.style.display='block';
+
+    let revAñEm=document.getElementById('revisAñadorProd');
+    revAñEm.style.display='none';
+    let finAñ=document.getElementById('prodAñadido');
+    finAñ.style.display='none';
+
+    document.getElementById('nombAñProd').value="";
+    document.getElementById('precioAñProd').value="";
+    document.getElementById('catAñProd').value="";
+    document.getElementById('empresaAñProd').value="";
+    document.getElementById('disponibleAñProd').value="";
+    document.getElementById('sucursalAñProd').value="";
+    document.getElementById('descripcionAñProd').value="";
+    document.getElementById('imagenAñProd').value="";
+
+    empresas.forEach(function (emp){
+        document.getElementById('empresaAñProd').innerHTML+=
+        `
+        <option>${emp.nombreE}</option>
+        `
+
+    })
+}
+
+function revisAñadorProd(){
+   
+    var nomAñProd=document.getElementById('nombAñProd').value;
+    var precAñProd=document.getElementById('precioAñProd').value;
+    var catAñProd=document.getElementById('catAñProd').value;
+    var empAñProd=document.getElementById('empresaAñProd').value;
+    var disAñProd=document.getElementById('disponibleAñProd').value;
+    var sucurAñProd=document.getElementById('sucursalAñProd').value;
+    var descAñProd=document.getElementById('descripcionAñProd').value;
+    var imgAñProd=document.getElementById('imagenAñProd').value;
+
+
+
+    console.log('cheque',disAñProd)
+    productoAñadir=[];
+
+    
+    productoAñadir= [{
+        nombreProd:nomAñProd,
+        precProd:precAñProd,
+        catProd:catAñProd,
+        emProd:empAñProd,
+        dispProd:disAñProd,
+        sucurPro: sucurAñProd,  
+        descProd:descAñProd,
+        imgProd:imgAñProd,
+           
+    }]
+
+    
+
+    let formAñPr=document.getElementById('formAñadirProd');
+    formAñPr.style.display='none';
+
+    let revAñEm=document.getElementById('revisAñadorProd');
+    revAñEm.style.display='block';
+
+    document.getElementById('imgRevProd').innerHTML =
+    `
+    
+    <div class="p-3 cuprum">
+    Imagen
+    <br>
+        <img src="${imgAñProd}" class="card-img py-1" alt="Imagen Producto" >
+    </div>
+    `
+
+    document.getElementById('datosRevProd').innerHTML =
+    `
+    Nombre del Producto: ${nomAñProd}
+    <br>
+    Precio del Producto:L.${precAñProd}
+    <br>
+    Categoria: ${catAñProd}
+    <br>
+    Empresa: ${empAñProd}
+    <br>
+    Sucursales ${sucurAñProd}
+    <br>
+    Descripción: ${descAñProd}
+    <br>
+    
+    `
+
+
+
+
+}
+
+
+function finalizarAñPro(){
+
+    let formAñProd=document.getElementById('formAñadirProd');
+    formAñProd.style.display='none';
+
+    let revAñProd=document.getElementById('revisAñadorProd');
+    revAñProd.style.display='none';
+
+    let finAñProd=document.getElementById('prodAñadido');
+    finAñProd.style.display='block';
+
+    productoAñadir.forEach(function(añprod){
+        if(añprod.nombreE=="" && añprod.catE=="" && añprod.telefE=="" && añprod.representanteE=="" && añprod.RTNE=="" ){
+            document.getElementById('prodFAñadido').innerHTML=
+            ` 
+            <h2> 
+                El producto no se ha añadido
+                <br>
+                Datos Insuficientes
+                <br>
+                <i class="fa-solid fa-circle-xmark fuenteAzul fa-2x"></i>
+                
+            <h2>
+            `
+    
+        }else{
+
+            productos.push(productoAñadir[0]);
+            
+            document.getElementById('prodFAñadido').innerHTML=
+            ` 
+            <h2> 
+                La empresa se 
+                <br>
+                ha añadido
+                <br>
+                <i class="fa-solid fa-circle-check fuenteAzul fa-2x"></i>
+            <h2>
+            `
+    
+        }
+
+    })
+console.log('prod',productos)
+}
+
+
+
+function eliminarProd(){
+    ocultarTodos();
+
+    let eliminarProd=document.getElementById('eliminarProducto');
+    eliminarProd.style.display='block';
+
+
+    generarProdsEl();
+
+}
+
+function generarProds(){
+
+    var nombreProd=document.getElementById('nombProd').value;
+    
+
+    document.getElementById('productoLista').innerHTML= "";
+
+    productos.forEach(function(prod){
+        if(nombreProd!=""){
+            if(prod.nombreE==nombreProd){
+                document.getElementById('productoLista').innerHTML+=
+                `
+                <option>Nombre Producto:${prod.nombreProd}, Categoría:${prod.catProd}</option>
+                                
+                `
+            }
+
+        }else{
+            document.getElementById('productoLista').innerHTML+=
+            `
+            <option>Nombre Producto:${prod.nombreProd}, Categoría:${prod.catProd}</option>
+                            
+            `
+        }
+
+
+    })
+
+}
+
+function generarProdsEl(){
+
+    var nombreProd=document.getElementById('nombProdEl').value;
+    
+
+    document.getElementById('producsListaL').innerHTML= "";
+
+    productos.forEach(function(prod){
+        if(nombreProd!=""){
+            if(prod.nombreE==nombreProd){
+                document.getElementById('producsListaL').innerHTML+=
+                `
+                <option>Nombre Producto:${prod.nombreProd}, Categoría:${prod.catProd}</option>
+                                
+                `
+            }
+
+        }else{
+            document.getElementById('producsListaL').innerHTML+=
+            `
+            <option>Nombre Producto:${prod.nombreProd}, Categoría:${prod.catProd}</option>
+                            
+            `
+        }
+
+
+    })
+
+}
+
+function eliminarProdLista(){
+    var prodElim=document.getElementById('producsListaL').value
+
+    var i=0;
+    productos.forEach(function(prod){
+        if(prodElim!=""){
+            if(prodElim=="Nombre Producto:"+prod.nombreProd+", Categoría:"+prod.catProd){
+                
+                console.log('empresa','hola')
+
+                productos.splice(productos[i],1)
+            }
+
+        }else{
+           
+        }
+
+        i++;
+    })
+
+    eliminarProd();
+}
+
+function genListaProd(){
+    ocultarTodos();
+
+    let listP=document.getElementById('listaProductos');
+    listP.style.display='block';
+    let genlistPr=document.getElementById('genListaProd');
+    genlistPr.style.display='block';
+    let detaPr=document.getElementById('datosProducto');
+    detaPr.style.display='none';
+
+    document.getElementById('productoLista').value="";
+    generarProds();
+
+
+}
+
+function verDProd(){
+
+    let lPr=document.getElementById('genListaProd');
+    lPr.style.display='none';
+    
+    let detaPr=document.getElementById('datosProducto');
+    detaPr.style.display='block';
+    
+
+    var listaPro=document.getElementById('productoLista').value
+    
+
+
+    var i=0;
+    productos.forEach(function(pr){
+        if(listaPro!=""){
+            if(listaPro=="Nombre Producto:"+pr.nombreProd+", Categoría:"+pr.catProd){
+                console.log('hola','hola')
+                document.getElementById('imgPrSel').innerHTML =
+                    `
+                    
+                    <div class=" p-3 cuprum">
+                        Imagen
+                        <br><br>
+                        <img src="${pr.imgProd}" class="card-img py-1" alt="Imagen Empresa" >
+                    </div>
+                    `
+
+                    document.getElementById('datosPrSel').innerHTML =
+                    `
+                    Nombre del Producto: ${pr.nombreProd}
+                    <br>
+                    Precio del Producto:L.${pr.precProd}
+                    <br>
+                    Categoria: ${pr.catProd}
+                    <br>
+                    Empresa: ${pr.emProd}
+                    <br>
+                    Sucursales ${pr.sucurPro}
+                    <br>
+                    Descripción: ${pr.descProd}
+                    <br>
+                    `
+                console.log('g','g')
+                
+            }
+
+        }else{
+            let detaPr=document.getElementById('datosProducto');
+            detaPr.style.display='none';
+            let lPr=document.getElementById('genListaProd');
+            lPr.style.display='block';
         }
 
         i++;

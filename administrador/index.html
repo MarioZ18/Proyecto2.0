@@ -62,7 +62,7 @@
                                     <i class="fa-solid fa-building fa-3x fuenteAzul"></i>
                                     Empresas
                                 </div>
-                                <div id="productosL" class="col-12 puntero py-2 centery " >
+                                <div id="productosL" class="col-12 puntero py-2 centery " onclick="productosAdm();">
                                     <i class="fa-solid fa-box fa-3x fuenteAzul"></i>
                                     Productos
                                 </div>
@@ -95,7 +95,7 @@
                                 <div class="container-fluid">
                                     <div class="row centerx mt-4">
                                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="card fondogris shadow my-1 puntero" >
+                                            <div class="card fondogris shadow my-1 puntero" onclick="empresasAdm();" >
                                                 <div class="card-title centerx" >
                                                     <h5 class="my-0">Empresas</h5>
                                                     </div>
@@ -114,7 +114,7 @@
 
                                     
                                         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                                            <div class="card fondogris shadow my-1 puntero" >
+                                            <div class="card fondogris shadow my-1 puntero" onclick="productosAdm();">
                                                 <div class="card-title centerx" >
                                                     <h5 class="my-0">Productos</h5>
                                                     </div>
@@ -173,6 +173,10 @@
                                 </div>
                             </div>
 
+
+
+
+<!------------------------------------------Empresas---------------------------------------->
 
 
                             <div id="empresas">
@@ -294,8 +298,8 @@
                                 <div id="revisAñadorE" >
                                     <div class="container mt-5">
                                         <div class="col-12 ">
-                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris center " >  
-                                                <div class=" row center">                     
+                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris" >  
+                                                <div class=" row">                     
                                                     <div id="logoRevE" class="col-4 center centery">
                                                          
                                                     </div>
@@ -344,8 +348,9 @@
                             <div id="eliminarEmpresa">
                                 <h3>Eliminar Empresa</h3>
 
-                                <div id="genListaE">
+                                <div id="genListaEL">
                                     <div>
+                                        
                                         <input class="impForm anchoImp sanchez" id="nombEmL" type="text" placeholder="Buscar Empresa">
                                         <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="generarEmpresas();">
                                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -376,13 +381,13 @@
                                 <h3>Lista de Empresas</h3>
 
                                 <div id="genListaE">
-                                    <div>
+                                    <form>
                                         <input class="impForm anchoImp sanchez" id="nombEm" type="text" placeholder="Buscar Empresa">
                                         <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="generarEmpresas();">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                         </button>
     
-                                    </div>
+                                    </form>
     
                                     <select id="empresasLista" class="form-select selectLista anchoSelecList sanchez" size="3" aria-label="size 10 select example">
                                         <option selected> </option>
@@ -417,22 +422,295 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="genListaEmpresas();">
+                                        Aceptar
+                                     </button>
                                 </div>   
                             </div>
 
+
+
+<!------------------------------------------Productos---------------------------------------->
                             <div id="productos">
-                                <i class="fa-solid fa-box fa-3x"></i>
-                                Productos
+
+                                <div class="container-fluid">
+                                    <div class="row centerx mt-4">
+                                        <div class="col-12 col-md-6">
+                                            <div class="card fondogris shadow my-1 puntero"  onclick="añadirProducs();">
+                                                <div class="card-body centerx">
+
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-boxes-packing fa-5x fuenteAzul"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Añadir Producto</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    
+                                        <div class="col-12 col-md-6">
+                                            <div class="card fondogris shadow my-1 puntero" onclick="eliminarProd();" >
+                                                <div class="card-body centerx">
+
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-box-open fa-5x fuenteAzul"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Eliminar Producto</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                
+                                        <div class="col-12 col-md-6">
+                                            <div class="card fondogris shadow my-1 puntero" onclick="genListaProd();" >
+                                                <div class="card-body centerx">
+
+                                                    <div class="mb-3">
+                                                        <i class="fa-solid fa-box-archive fa-5x fuenteAzul"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="card-title centerx" >
+                                                    <h5 class="my-0">Lista de Productos</h5>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+
+                            </div>
+
+                            <div id="añadirProducto">    
+                                <h3>Añadir Producto</h3>
+
+                                <div id="formAñadirProd">
+
+                                    <div>
+                                        Nombre del Producto:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="nombAñProd" type="text">
+
+                                    </div>
+                                    <div>
+                                        Precio del Producto:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="precioAñProd" type="text">
+
+                                    </div>
+                                    <div>
+                                        Categoría del Producto:
+                                        <br>
+                                        <select id="catAñProd" class="impForm anchoImp sanchez form-select">
+                                            <option selected> </option>
+                                            <option>Comida</option>
+                                            <option>Tiendas y Supermercados</option>
+                                            <option>Farmacia</option>
+                                            <option>Herramientas</option>
+                                            <option>Libreria y Papelería</option>
+                                            <option>Electronicos</option>
+                                            <option>Belleza y Cuidado Personal</option>
+                                            <option>Café y Panadería</option>
+                                        </select>
+
+                                    </div>
+
+                                    <div>
+                                        Empresa del Producto:
+                                        <br>
+                                        <select id="empresaAñProd" class="impForm anchoImp sanchez form-select">
+                                            <option selected> </option>
+                                            
+                                        </select>
+
+                                    </div>
+
+                                    <div>
+                                        Disponible:
+                                        <div>
+                                            <input class="form-check-input" type="checkbox" id="disponibleAñProd" value="" aria-label="...">
+                                          </div>
+
+                                    </div>
+
+                                    <div>
+                                        Sucursal:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="sucursalAñProd" type="number" >
+
+                                    </div>
+                                    <div>
+                                       Descripción:
+                                        <br>
+                                        <input class="impForm anchoImp sanchez" id="descripcionAñProd" type="text">
+
+                                    </div>
+                                
+                                    <div>
+                                        URL Imagen del Producto:
+                                        <input class="impForm anchoImp sanchez" id="imagenAñProd" type="text">
+
+                                    </div>
+                                    <div class="centerx">
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="productosAdm();">
+                                            Cancelar
+                                        </button>
+                                        <button class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="revisAñadorProd();">
+                                            Continuar
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+
+                                <div id="revisAñadorProd" >
+                                    <div class="container mt-5">
+                                        <div class="col-12 ">
+                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris center " >  
+                                                <div class=" row center">                     
+                                                    <div id="imgRevProd" class="col-4 center centery">
+                                                        
+                                                    </div>
+                                                    <div id="datosRevProd" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                        
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="centerx">
+                                        <button  class="btn cuprum fondoGrisO sinBorde bordesRedo m-2 shadow" type="button" onclick="productosAdm();">
+                                            Cancelar
+                                        </button>
+
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="finalizarAñPro();">
+                                            Aceptar
+                                        </button>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div id="prodAñadido">
+                                    <div class="container mt-5">
+                                        <div class="col-12 p-4">
+                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris center " >  
+                                                <div id="prodFAñadido" class="fuenteGris centerx">                     
+                                                    
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="centerx">
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="productosAdm();">
+                                            Finalizar
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div id="eliminarProducto">
+                                <h3>Eliminar Producto</h3>
+
+                                <div id="genListaEL">
+                                    <div>
+                                        
+                                        <input class="impForm anchoImp sanchez" id="nombProdEl" type="text" placeholder="Buscar Empresa">
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="generarProdsEl();">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+
+                                    </div>
+
+                                    <select id="producsListaL" class="form-select selectLista anchoSelecList sanchez" size="3" aria-label="size 10 select example">
+                                        <option selected> </option>
+                                        
+                                    </select>
+
+                                </div>
+
+                                <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="productosAdm();">
+                                    Cancelar
+                                </button>
+
+                                <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="eliminarProdLista();">
+                                Eliminar
+                                </button>
+
+
+                            </div>
+
+                            <div id="listaProductos">
+
+                                <h3>Lista de Productos</h3>
+
+                                <div id="genListaProd">
+                                    <form>
+                                        <input class="impForm anchoImp sanchez" id="nombProd" type="text" placeholder="Buscar Empresa">
+                                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="generarProds();">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+
+                                    </form>
+
+                                    <select id="productoLista" class="form-select selectLista anchoSelecList sanchez" size="3" aria-label="size 10 select example">
+                                        <option selected> </option>
+                                        
+                                    </select>
+
+                                    <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="verDProd();">
+                                        Ver Detalles
+                                    </button>
+
+                                    <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="productosAdm();">
+                                        Aceptar
+                                    </button>
+
+                                </div>
+
+                                
+                                
+
+                                <div id="datosProducto">
+                                    <div class="container mt-5">
+                                        <div class="col-12 ">
+                                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris  " >  
+                                                <div class=" row center">                     
+                                                    <div id="imgPrSel" class="col-4 centery">
+                                                        
+                                                    </div>
+                                                    <div id="datosPrSel" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                        
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="genListaProd();">
+                                                Aceptar
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                    
+                                </div>   
                             </div>
 
 
+<!------------------------------------------Motoristas---------------------------------------->
 
                             <div id="motoristas">
                                 <i class="fa-solid fa-person-biking fa-3x"></i>
-                                Motoristas
+                                 Motoristas
                             </div>
 
 
+<!------------------------------------------Pedidos---------------------------------------->
 
                             <div id="pedidos">
                                 <i class="fa-solid fa-clipboard-list fa-3x"></i>
@@ -440,6 +718,7 @@
                             </div>
 
 
+<!------------------------------------------Perfil---------------------------------------->
 
                             <div id="perfil">
                                 <i class="fa-regular fa-user fa-3x"></i>
