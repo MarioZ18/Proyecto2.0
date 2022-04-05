@@ -66,7 +66,7 @@
                                     <i class="fa-solid fa-box fa-3x fuenteAzul"></i>
                                     Productos
                                 </div>
-                                <div id="motoristasL" class="col-12 puntero py-2 centery " >
+                                <div id="motoristasL" class="col-12 puntero py-2 centery " onclick="motoristasAdm();">
                                     <i class="fa-solid fa-person-biking fa-3x fuenteAzul"></i>
                                     Motoristas
                                 </div>
@@ -88,7 +88,7 @@
                         </div> 
 
                        
-                        <div class="col-8 fuenteCu">
+                        <div class="col-8 cuprum">
 
                             <div id="inicioW">
 
@@ -303,7 +303,7 @@
                                                     <div id="logoRevE" class="col-4 center centery">
                                                          
                                                     </div>
-                                                    <div id="datosRevE" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                    <div id="datosRevE" class="col-7 centery cuprum py-2 fuenteOD" >
                                                         
                                                     </div>
                                                 </div>  
@@ -415,7 +415,7 @@
                                                     <div id="logoESel" class="col-4 center centery">
                                                          
                                                     </div>
-                                                    <div id="datosESel" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                    <div id="datosESel" class="col-7 centery cuprum py-2 fuenteOD" >
                                                         
                                                     </div>
                                                 </div>  
@@ -499,7 +499,7 @@
                                     <div>
                                         Precio del Producto:
                                         <br>
-                                        <input class="impForm anchoImp sanchez" id="precioAñProd" type="text">
+                                        <input class="impForm anchoImp sanchez" id="precioAñProd" type="number">
 
                                     </div>
                                     <div>
@@ -540,7 +540,7 @@
                                     <div>
                                         Sucursal:
                                         <br>
-                                        <input class="impForm anchoImp sanchez" id="sucursalAñProd" type="number" >
+                                        <input class="impForm anchoImp sanchez" id="sucursalAñProd" type="text" >
 
                                     </div>
                                     <div>
@@ -574,7 +574,7 @@
                                                     <div id="imgRevProd" class="col-4 center centery">
                                                         
                                                     </div>
-                                                    <div id="datosRevProd" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                    <div id="datosRevProd" class="col-7 centery cuprum py-2 fuenteOD" >
                                                         
                                                     </div>
                                                 </div>  
@@ -686,7 +686,7 @@
                                                     <div id="imgPrSel" class="col-4 centery">
                                                         
                                                     </div>
-                                                    <div id="datosPrSel" class="col-7 centery fuenteCu py-2 fuenteOD" >
+                                                    <div id="datosPrSel" class="col-7 centery cuprum py-2 fuenteOD" >
                                                         
                                                     </div>
                                                 </div>  
@@ -705,9 +705,51 @@
 <!------------------------------------------Motoristas---------------------------------------->
 
                             <div id="motoristas">
-                                <i class="fa-solid fa-person-biking fa-3x"></i>
-                                 Motoristas
+
+                                <h3>Motoristas</h3>
+
+                                <div id="motoristasT">
+                                    <div class="container-fluid">
+                                        <div class="row centerx mt-4">
+                                            <div class="col-12">
+                                                
+                                                <div id="motoristasEnW" class="row centerx mt-4">
+                                                        
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                
+                                <div id="perfilMotoAct" >
+
+                                    <div id="fotoPerfil">
+                                        <div class="centerx">
+                                            <i  class="fa-solid fa-user-large fa-5x  fuenteAzul"></i>   
+                                        </div>
+                                    
+                                    </div>
+                                    <br>
+                            
+                                    <div id="datosMA" class="center">
+                                        
+                                        
+                                   </div>
+                                   <div  id="cerrarPerfil" class="centerx cuprum mt-3">
+                                        <button class="btn fondoCel bordAzul bordes25 mb-4 shadow" type="button" onclick="motoristasAdm();">
+                                            Aceptar
+                                        </button>
+                                    </div>
+                                </div>
+                                
                             </div>
+
+
+
+
 
 
 <!------------------------------------------Pedidos---------------------------------------->

@@ -21,6 +21,69 @@ var productos=[{
        
 }]
 
+var motoristas=[
+    {
+        nombre:"José",
+        apellido:"Martinez",
+        id:"M001",
+        correo:"a",
+        ubicación:"Tegucigalpa F.M., HN",
+        telefono:"9999-9900",
+        disponibilidad:true,
+        contraseña:"a",
+        ordenesAceptadas:[],
+        ordenesCompletadas:[]
+    },
+
+    {
+        nombre:"Marcos",
+        apellido:"Sierra",
+        id:"M002",
+        correo:"sierraM@gmail.com",
+        ubicación:"Tegucigalpa F.M., HN",
+        telefono:"9999-9901",
+        disponibilidad:true,
+        contraseña:"1234567890",
+        ordenesAceptadas:[],
+        ordenesCompletadas:[]
+    },
+    {
+        nombre:"Maria",
+        apellido:"Castillo",
+        id:"M003",
+        correo:"castillosMar41@gmail.com",
+        ubicación:"Tegucigalpa F.M., HN",
+        telefono:"9999-9903",
+        disponibilidad:false,
+        contraseña:"contraseña2.0",
+        ordenesAceptadas:[],
+        ordenesCompletadas:[]
+    },
+    {
+        nombre:"Salmonelo",
+        apellido:"Ramos",
+        id:"M004",
+        correo:"ralmonelozz@gmail.com",
+        ubicación:"Tegucigalpa F.M., HN",
+        telefono:"9999-9904",
+        disponibilidad:true,
+        contraseña:"1324576890",
+        ordenesAceptadas:[],
+        ordenesCompletadas:[]
+    },
+    {
+        nombre:"Camilo",
+        apellido:"Madrigal",
+        id:"M005",
+        correo:"camilegrand01@gmail.com",
+        ubicación:"Tegucigalpa F.M., HN",
+        telefono:"9999-9905",
+        disponibilidad:false,
+        contraseña:"nohaycontraseña2",
+        ordenesAceptadas:[],
+        ordenesCompletadas:[]
+    }
+]
 var administas=[]
 
 var pedidos=[]
@@ -62,7 +125,7 @@ var perfiles=[
 var perfilActual=[]
 
 
-
+var disponMoto="";
 
 
 
@@ -117,11 +180,15 @@ function ocultarTodos(){
     let genlistProd=document.getElementById('genListaE');
     genlistProd.style.display='none';
 
-    /**let oPerfil=document.getElementById('parteSup');
-    oParteSup.style.display='none';
+    let oMotoristasT=document.getElementById('motoristasT');
+    oMotoristasT.style.display='none';
+
+    let oMotoristasDat=document.getElementById('perfilMotoAct');
+    oMotoristasDat.style.display='none';
 
     let oParteSup=document.getElementById('parteSup');
-    oParteSup.style.display='none';*/
+    oParteSup.style.display='none';
+
  
 }
 ocultarTodos();
@@ -196,15 +263,7 @@ function inicioAdm(){
     let minicioW=document.getElementById('inicioW');
     minicioW.style.display='block';
 
-  
 
-   /* paginas.splice(pagina);
-    var pagina="";
-
-      pagina= {   
-            paginaActual:'inici0',
-        }
-    paginas.push(pagina);*/
 }
 
 /*--------------------------------------------Pagina de Empresas----------------------------------------------*/
@@ -222,14 +281,6 @@ function empresasAdm(){
     empres.style.display='block';
 
   
-
-   /* paginas.splice(pagina);
-    var pagina="";
-
-      pagina= {   
-            paginaActual:'inici0',
-        }
-    paginas.push(pagina);*/
 }
 
 function añadirEmpresa(){
@@ -527,6 +578,10 @@ function verDEm(){
     })
 }
 
+
+
+
+
 /*--------------------------------------------Pagina de Productos----------------------------------------------*/
 
 function productosAdm(){
@@ -675,7 +730,7 @@ function finalizarAñPro(){
             document.getElementById('prodFAñadido').innerHTML=
             ` 
             <h2> 
-                La empresa se 
+                El producto se 
                 <br>
                 ha añadido
                 <br>
@@ -858,3 +913,122 @@ function verDProd(){
         i++;
     })
 }
+
+
+/*--------------------------------------------Pagina de Motoristas----------------------------------------------*/
+
+function motoristasAdm(){
+
+    ocultarTodos();
+    let motorista=document.getElementById('motoristas');
+    motorista.style.display='block';
+
+    let motoristasT=document.getElementById('motoristasT');
+    motoristasT.style.display='block';
+
+    let motoristasDat=document.getElementById('perfilMotoAct');
+    motoristasDat.style.display='none';
+
+    var actM="";
+
+    document.getElementById('motoristasEnW').innerHTML=""
+
+    motoristas.forEach(function (moto){
+
+        if(moto.disponibilidad==true){
+            actM="checked"
+        }else{
+            actM="disable";
+        }
+
+        if(disponMoto==moto.disponibilidad){
+            document.getElementById('motoristasEnW').innerHTML+=
+        `
+        <div class="m-3 puntero row">
+            <div class="col-3">
+                <div  id="imagenMoto" class="card sinFondo sinBorde">
+                    <i  class="fa-solid fa-user-large fa-3x  fuenteAzul"></i>   
+                </div>  
+                                                                
+            </div>
+            <div class="col-4">
+                ${moto.nombre} ${moto.apellido}                                                
+            </div>
+            <div class="col-2">
+                ${moto.id}                                      
+            </div>
+            <div class="col-2" id="motoActivo">
+                <input class="form-check-input" type="checkbox" value="" id="activoCheck" ${actM} >
+                    <label class="form-check-label" for="activoCheck">
+                        Activo
+                    </label> 
+                                                                
+            </div>
+        </div>
+        
+        `
+
+        }else{
+            if(disponMoto==""){
+                document.getElementById('motoristasEnW').innerHTML+=
+                `
+                <div class="m-3 row puntero" onclick="perfilMoto('${moto.id}')">
+                <div class="col-3">
+                    <div  id="imagenMoto" class="card sinFondo sinBorde">
+                        <i  class="fa-solid fa-user-large fa-3x  fuenteAzul"></i>   
+                    </div>  
+                                                                    
+                </div>
+                <div class="col-4">
+                    ${moto.nombre} ${moto.apellido}                                                
+                </div>
+                <div class="col-2">
+                    ${moto.id}                                      
+                </div>
+                <div class="col-2" id="motoActivo">
+                    <input class="form-check-input" type="checkbox" value="" id="activoCheck" ${actM} >
+                        <label class="form-check-label" for="activoCheck">
+                            Activo
+                        </label> 
+                                                                    
+                </div>
+                </div>
+                `
+            }
+        }
+
+    })
+
+}
+
+function filtroMoto(disp){
+    disponMoto="";
+    disponMoto=disp;
+
+    motoristasAdm();
+
+}
+
+function perfilMoto(idM){
+    let motoristasT=document.getElementById('motoristasT');
+    motoristasT.style.display='none';
+    let motoristasDat=document.getElementById('perfilMotoAct');
+    motoristasDat.style.display='block';
+
+
+    motoristas.forEach(function(moto){
+        if(idM==moto.id){
+            document.getElementById('datosMA').innerHTML=
+            `
+            <div class="cuprum">ID: ${moto.id}</div>
+            <div class="cuprum">Nombre: ${moto.nombre} ${moto.apellido}</div>
+            <div class="cuprum">Correo: ${moto.correo}</div>
+            <div class="cuprum">Ubicación: ${moto.ubicación}</div>
+            <div class="cuprum">Telefono: ${moto.telefono}</div>
+            
+            `
+        }
+    })
+}
+
+
