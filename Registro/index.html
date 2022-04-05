@@ -11,21 +11,20 @@
 <body>
 
     
-    <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-light p-4" id="colap">
-            <div><a href="../Quienes Somos/index.html">¿Quiénes somos?</a></div>
-            <div><a href="../Proveedores/index.html">Proveedores</a></div>
-            <div><a href="../Atencion al cliente/index.html">Atención al cliente</a></div>
-            <div><a href="../FAQ/index.html">Preguntas frecuentes</a></div>
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <img src="../Principal/img/5949947.png" alt="" style="width: 2rem;">
+    </a>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-body">
+            <div class="listaopciones">
+                <div class="listaElemento"><li><a id="listaLink" href="../Quienes Somos/index.html">¿Quiénes somos?</a></li></div>
+                <div class="listaElemento"><li><a id="listaLink" href="../Proveedores/index.html">Proveedores</a></li></div>
+                <div class="listaElemento"><li><a id="listaLink" href="../Atencion al cliente/index.html">Atención al cliente</a></li></div>
+                <div class="listaElemento"><li><a id="listaLink" href="../FAQ/index.html">Preguntas frecuentes</a></li></div>
+            </div>
         </div>
-      </div>
-      <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
+    </div>
 
       <div id="logo">
         <img id="imglogo" src="img/logo.png" alt="">

@@ -52,7 +52,7 @@ body{
     text-decoration: none !important;
     color: #dad618 !important;
     font-size:xx-small;
-    margin-left: 2.1rem;
+    margin-left: 2.4rem;
     margin-top: -1.25rem;
     margin-bottom: 2rem;
 }
@@ -67,7 +67,7 @@ body{
     border-top-width: thin;
     padding-bottom: 1.3rem;
     padding-top: 1.3rem;
-    border-bottom-color: lightblue
+    border-bottom-color: lightblue;
 }
 
 #listaLink{

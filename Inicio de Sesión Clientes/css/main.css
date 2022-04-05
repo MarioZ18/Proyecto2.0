@@ -17,6 +17,46 @@ a{
     background-color: transparent !important;
 }
 
+.btn-primary{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.btn-primary:active{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.btn-primary:focus{
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.offcanvas-start{
+    width: 220px !important;
+    background-color: #015989 !important;
+}
+
+.listaElemento{
+    list-style: none;
+    border-style: solid;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-bottom-width: thin;
+    border-top-width: thin;
+    padding-bottom: 1.3rem;
+    padding-top: 1.3rem;
+    border-bottom-color: lightblue;
+}
+
+#listaLink{
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    color: black;
+}
+
 input{
     border-color: transparent;
     border-radius: 6px;
@@ -41,6 +81,7 @@ input{
     #imglogo{
         width: 10%;
         }
+        
 }
 
 #usuarioID{
@@ -80,3 +121,27 @@ input{
     text-align: center;
     text-decoration: underline;
 }
+
+@media screen and (min-width: 700px) {
+    .offcanvas-start{
+        width: 400px !important;
+    }
+
+    #listaLink{
+        font-size: 1.5rem;
+    }
+
+    .listaElemento{
+        list-style: none;
+        border-style: solid;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-top-color: transparent;
+        border-bottom-width: thin;
+        border-top-width: thin;
+        padding-bottom: 1.6rem;
+        padding-top: 1.6rem;
+        border-bottom-color: lightblue;
+    }
+}
+    
