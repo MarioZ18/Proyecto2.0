@@ -207,8 +207,7 @@ background-color: #1FBAE4;
     size: 1px 1px;
 }
 #logoM2{
-   width: 350px;
-    
+   width: 350px; 
 }
 
 #logoM3{
@@ -230,8 +229,7 @@ background-color: #1FBAE4;
 }
 
 .fuenteBe{
-    font-family: 'Bebas Neue', cursive;
-     
+    font-family: 'Bebas Neue', cursive;  
 }
 
 .subT{
@@ -305,7 +303,7 @@ background-color: #1FBAE4;
 }
 
 #fact2{
-    width: 70%;
+    width: 90% !important;
    font-size: 20px !important;
 
 }
@@ -428,21 +426,7 @@ background-color: #1FBAE4;
     }
 
     #fact2{
-        width: 70%;
        font-size: 15px !important;
-    
     }
-
  }
 
-/*/ Medium devices (tablets, 768px and up)*/
-@media (min-width: 576px ) and (max-width:767.98px) {  }
-
-/*/ Large devices (desktops, 992px and up)*/
-@media (min-width: 768px ) and (max-width:991.98px) {  }
-
-/*/ X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 992px ) and (max-width:1199.98px) {  }
-
-/*/ XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1200px )  {  }

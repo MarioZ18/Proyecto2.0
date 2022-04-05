@@ -875,7 +875,7 @@ function detallesPedidoProgreso(idP,lugarE){
     mostrarDeta.style.display='block';
     
 
-    document.getElementById('tituloOD').innerHTML =
+    document.getElementById('tituloOP').innerHTML =
     `<div class="center" >Detalles del Pedidos</div>
     <hr class="black">
     <div class="center">ID del Pedido: ${idP}</div>`
@@ -886,7 +886,7 @@ function detallesPedidoProgreso(idP,lugarE){
     document.getElementById('btnFact').innerHTML =
         `<div  id="TomarPed" class="center fuenteCu mt-3">
             <button   id="bTomarPed" class="btn fondoCel bordAzul bordes25 mb-4 shadow" type="button" onclick="fPedidoProgeso('${idP}','${lugarE}');">
-                Factura del Pedido
+                Finalizar Orden
             </button>
         </div>`
     
@@ -966,7 +966,7 @@ function fPedidoProgeso(idP,l){
                     document.getElementById('btnEntregado').innerHTML =
                     `<div  id="TomarPed" class="center fuenteCu mt-3">
                         <button   id="bTomarPed" class="btn fondoCel bordAzul bordes25 mb-4 shadow" type="button" onclick="pedidoFinalizado('${idP}','${l}');">
-                            Finalizar Pedido
+                            Ver detalles del envio
                         </button>
                     </div>`
 
@@ -977,13 +977,18 @@ function fPedidoProgeso(idP,l){
         })
     })
 
-    var tarif=50;
-    var tot=tarif+subtotal;
+    var tarifMoto=50;
+    var tarifAdm=50;
+    var ISV= (0.15*subtotal)
+    var tot=ISV+subtotal+tarifAdm+tarifMoto;
 
     document.getElementById('totalOP').innerHTML =
     `Subtotal: ${subtotal}
     <br>
-    Tarifa de envío: ${tarif}
+    ISV: ${ISV}
+    <br>
+    Tarifa de envío: ${tarifMoto+tarifAdm}
+    
     <hr class="black">
     Total: ${tot}`
 }
@@ -1341,7 +1346,7 @@ function fPedidoCom(idP,l){
     mostrarfactOC.style.display='block';
 
 
-    document.getElementById('tituloOP').innerHTML =
+    document.getElementById('tituloOC').innerHTML =
     `
     <div class="center" >Detalles del Pedidos</div>
     <hr class="black">
@@ -1398,13 +1403,18 @@ function fPedidoCom(idP,l){
         })
     })
 
-    var tarif=50;
-    var tot=tarif+subtotal;
+    var tarifMoto=50;
+    var tarifAdm=50;
+    var ISV= (0.15*subtotal)
+    var tot=ISV+subtotal+tarifAdm+tarifMoto;
 
     document.getElementById('totalOC').innerHTML =
     `Subtotal: ${subtotal}
     <br>
-    Tarifa de envío: ${tarif}
+    ISV: ${ISV}
+    <br>
+    Tarifa de envío: ${tarifMoto+tarifAdm}
+    
     <hr class="black">
     Total: ${tot}`
 }
